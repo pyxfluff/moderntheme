@@ -260,7 +260,7 @@ blockquote {
     border-left: 4px solid $BGPrimary !important;
 }
 
-.btn.no-text:not(.btn-transparent):not(.topic-map__views-trigger):not(.show-all):not(.profile-tab-btn):not(.topic-drafts-menu-trigger):not(.notifications-tracking-trigger):not(.edit-category):not(.toggle-like):not(.topic-map__links-trigger) {
+.btn.no-text:not(.btn-transparent):not(.topic-map__views-trigger):not(.show-all):not(.profile-tab-btn):not(.topic-drafts-menu-trigger):not(.notifications-tracking-trigger):not(.edit-category):not(.toggle-like):not(.topic-map__links-trigger):not(.notifications-tracking-btn) {
     border-radius: 100% !important;
     aspect-ratio: 1;
 
