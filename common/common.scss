@@ -1,4 +1,4 @@
-// pyxfluff 2024
+// pyxfluff 2024 - 2025
 
 $BGPrimary: rgba(var(--secondary-rgb), 0.5);
 
@@ -83,7 +83,7 @@ div.not-found-container,
         padding-right: 10px;
         margin-right: auto;
 
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
     }
 
     .sidebar-wrapper,
@@ -165,7 +165,10 @@ body.no-ember .d-header {
 }
 
 .powered-by-discourse {
-    display: none; // i'll deal with you later
+    margin-bottom: 3em;
+    border-radius: 0px 0px 0px 1em;
+
+    background: $BGPrimary
 }
 
 // Posts
