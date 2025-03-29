@@ -179,8 +179,8 @@ body.no-ember .d-header {
 // Posts
 
 .post-menu-area {
-    @include ClearMenuNoRounding();
-    
+    @include ClearMenu();
+
     width: fit-content;
     float: right;
 
