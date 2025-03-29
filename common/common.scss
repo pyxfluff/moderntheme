@@ -205,6 +205,13 @@ button,
     border-radius: 8px !important;
 }
 
+#reply-control:not(.fullscreen) {
+    .has-sidebar-page & {
+        transform: unset !important;
+        margin: unset !important
+    }
+}
+
 .topic-footer-main-buttons .btn,
 controls ul li a,
 .btn-icon-text:not(.create):not(.danger):not(.btn-primary),
