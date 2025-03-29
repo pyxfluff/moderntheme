@@ -205,10 +205,11 @@ button,
     border-radius: 8px !important;
 }
 
-#reply-control:not(.fullscreen) {
-    .has-sidebar-page & {
+@media screen and (min-width: calc(551px)) {
+    #reply-control .reply-area {
         transform: unset !important;
-        margin-right: unset !important
+        margin-right: unset !important;
+        margin-left: unset !important
     }
 }
 
