@@ -179,16 +179,13 @@ body.no-ember .d-header {
 // Posts
 
 .post-menu-area {
-    @include BorderByOption("more");
-
+    @include ClearMenuNoRounding();
+    
     width: fit-content;
     float: right;
 
-    background: $BGPrimary;
     padding: 5px;
     margin-bottom: 0px;
-
-    backdrop-filter: blur(3rem);
 
     button {
         border-radius: 4px;
