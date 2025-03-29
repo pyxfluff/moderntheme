@@ -568,12 +568,17 @@ controls ul li a,
     @include ClearMenu()
 }
 
-.regular.contents,
+.regular,
 .topic-map,
 .topic-statuses:has(:not(:empty)) {
     @include ClearMenuNoRounding();
 
-    border-radius: 6px 6px 0px 6px;
+    border-radius: 8px;
+
+    &.contents {
+        border-radius: 6px 6px 0px 6px !important;
+    }
+
 }
 
 .topic-statuses:has(:not(:empty)) {
