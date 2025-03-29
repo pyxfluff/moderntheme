@@ -568,7 +568,7 @@ controls ul li a,
     @include ClearMenu()
 }
 
-.regular,
+.regular.contents,
 .topic-map,
 .topic-statuses:has(:not(:empty)) {
     @include ClearMenuNoRounding();
