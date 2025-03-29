@@ -208,7 +208,8 @@ button,
 #reply-control:not(.fullscreen) {
     .has-sidebar-page & {
         transform: unset !important;
-        margin: unset !important
+        margin-left: unset !important;
+        margin-right: unset !important
     }
 }
 
