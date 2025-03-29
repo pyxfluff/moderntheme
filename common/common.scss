@@ -544,13 +544,13 @@ controls ul li a,
 
 .regular.contents,
 .topic-map,
-.topic-statuses {
+.topic-statuses:has(:not(:empty)) {
     @include ClearMenuNoRounding();
 
     border-radius: 6px;
 }
 
-.topic-statuses {
+.topic-statuses:has(:not(:empty)) {
     padding: 3px 10px 3px 10px;
     margin-right: 5px;
 }
