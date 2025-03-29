@@ -166,7 +166,7 @@ body.no-ember .d-header {
 
 .powered-by-discourse {
     margin-bottom: 3em;
-    border-radius: 0px 0px 0px 1em;
+    border-radius: 0px 0px 1em 0px;
 
     background: $BGPrimary;
     backdrop-filter: blur(2rem);
@@ -187,6 +187,8 @@ body.no-ember .d-header {
     background: $BGPrimary;
     padding: 5px;
     margin-bottom: 0px;
+
+    backdrop-filter: blur(3rem);
 
     button {
         border-radius: 4px;
@@ -372,6 +374,15 @@ nav.post-controls .actions .double-button button.like .d-icon {
 
     .grippie {
         border-radius: 18px 18px 0px 0px;
+    }
+
+    &.open {
+        margin-bottom: 25px;
+        box-shadow: 0 0px 40px rgba(0, 0, 0, 1);
+    }
+
+    details.composer-actions, summary {
+        background: transparent !important
     }
 }
 
@@ -590,4 +601,8 @@ controls ul li a,
 
 div.edit-category .edit-category-title-bar {
     @include ClearMenu()
+}
+
+.cooked img {
+    border-radius: 8px;
 }
