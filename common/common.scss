@@ -179,13 +179,18 @@ body.no-ember .d-header {
 // Posts
 
 .post-menu-area {
-    @include ClearMenu();
+    @include ClearMenuNoRounding();
 
     width: fit-content;
     float: right;
 
     padding: 5px;
     margin-bottom: 0px;
+
+    padding-top: 0px;
+    margin-top: 0px;
+
+    border-radius: 0px 0px 6px 6px;
 
     button {
         border-radius: 4px;
@@ -568,7 +573,7 @@ controls ul li a,
 .topic-statuses:has(:not(:empty)) {
     @include ClearMenuNoRounding();
 
-    border-radius: 6px;
+    border-radius: 6px 6px 0px 6px;
 }
 
 .topic-statuses:has(:not(:empty)) {
