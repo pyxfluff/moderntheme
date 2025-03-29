@@ -168,7 +168,12 @@ body.no-ember .d-header {
     margin-bottom: 3em;
     border-radius: 0px 0px 0px 1em;
 
-    background: $BGPrimary
+    background: $BGPrimary;
+    backdrop-filter: blur(2rem);
+
+    .powered-by-discourse__content {
+        background: transparent;
+    }
 }
 
 // Posts
