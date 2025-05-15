@@ -226,13 +226,13 @@ controls ul li a,
 }
 
 img.avatar,
-.avatar-flair,
-.reviewable-item .post-body img {
+.avatar-flair{
     border-radius: 15% !important;
 }
 
 .img,
-.admin-new-feature-item__screenshot {
+.admin-new-feature-item__screenshot,
+.reviewable-item .post-body img  {
     border-radius: 8px
 }
 
