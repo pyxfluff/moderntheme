@@ -664,4 +664,19 @@ div.edit-category .edit-category-title-bar {
     .console-logs {
         @include ClearMenu()
     }
+
+    .d-admin-row__content.repo.has-update {
+        background-color: rgba(var(--tertiary), .5);
+        backdrop-filter: blur(2rem);
+    }
+}
+
+.progress-bar {
+    @include ClearMenuNoRounding();
+
+    border-radius: 6px;
+
+    .progress-bar-inner {
+        border-radius: 6px;
+    }
 }
