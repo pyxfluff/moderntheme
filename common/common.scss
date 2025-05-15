@@ -257,7 +257,19 @@ blockquote {
     border-left: 4px solid $BGPrimary !important;
 }
 
-.btn.no-text:not(.btn-transparent):not(.topic-map__views-trigger):not(.show-all):not(.profile-tab-btn):not(.topic-drafts-menu-trigger):not(.notifications-tracking-trigger):not(.edit-category):not(.toggle-like):not(.topic-map__links-trigger):not(.notifications-tracking-btn) {
+.btn.no-text
+    :not(.btn-transparent)
+    :not(.topic-map__views-trigger)
+    :not(.show-all)
+    :not(.profile-tab-btn)
+    :not(.topic-drafts-menu-trigger)
+    :not(.notifications-tracking-trigger)
+    :not(.edit-category)
+    :not(.toggle-like)
+    :not(.topic-map__links-trigger)
+    :not(.notifications-tracking-btn)
+    :not(#upgrade-all) 
+{
     border-radius: 100% !important;
     aspect-ratio: 1;
 
@@ -276,7 +288,6 @@ nav.post-controls .actions .double-button button.like .d-icon {
 
 
 // Profiles
-
 .user-main {
 
     .details,
@@ -647,4 +658,10 @@ div.edit-category .edit-category-title-bar {
 
 .d-date-time-input {
     border: none;
+}
+
+.docker-manager {
+    .console-logs {
+        @include ClearMenu()
+    }
 }
