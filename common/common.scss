@@ -2,12 +2,6 @@
 
 $BGPrimary: rgba(var(--secondary-rgb), 0.5);
 
-@mixin SemiTransparentBox() {
-    border-radius: 12px;
-    background: rgba(var(--secondary-rgb), .4);
-    border: rgba(var(--secondary-rgb), .4)
-}
-
 @mixin BorderByOption($style) {
     @if $style =="more" {
         border-radius: 18px;
@@ -224,13 +218,16 @@ controls ul li a,
 .user-admin {
     background: $BGPrimary !important;
 
-    &.create, &.compose-pm, &.chat-direct-message-btn {
+    &.create,
+    &.compose-pm,
+    &.chat-direct-message-btn {
         color: var(--tertiary)
     }
 }
 
 img.avatar,
-.avatar-flair {
+.avatar-flair,
+.reviewable-item .post-body img {
     border-radius: 15% !important;
 }
 
@@ -366,14 +363,14 @@ nav.post-controls .actions .double-button button.like .d-icon {
 
 // Composer
 #reply-control {
-    @include SemiTransparentBox();
+    @include ClearMenu();
     backdrop-filter: blur(2rem);
 
     .d-editor-textarea-wrapper,
     details,
     input,
     summary {
-        @include SemiTransparentBox();
+        @include ClearMenu();
         backdrop-filter: blur(2rem);
 
         border: none;
@@ -391,7 +388,8 @@ nav.post-controls .actions .double-button button.like .d-icon {
         box-shadow: 0 0px 40px rgba(0, 0, 0, 1);
     }
 
-    details.composer-actions, summary {
+    details.composer-actions,
+    summary {
         background: transparent !important
     }
 }
@@ -620,4 +618,33 @@ div.edit-category .edit-category-title-bar {
 
 .cooked img {
     border-radius: 8px;
+}
+
+.reviewable .reviewable-container .reviewable-list {
+    max-width: unset;
+
+    .reviewable-item {
+        @include ClearMenu();
+
+        .reviewable-contents {
+            @include ClearMenu();
+        }
+
+        .post-body {
+            max-width: unset;
+        }
+
+        .reviewable-scores {
+            width: 100%;
+
+            .user {
+                backdrop-filter: none;
+                background: transparent;
+            }
+        }
+    }
+}
+
+.d-date-time-input {
+    border: none;
 }
