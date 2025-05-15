@@ -668,6 +668,9 @@ div.edit-category .edit-category-title-bar {
     .d-admin-row__content.repo.has-update {
         background-color: rgba(var(--tertiary-very-low), .5);
         backdrop-filter: blur(2rem);
+
+        border-left: solid 10px var(--tertiary);
+        border-radius: 7px 0px 0px 0px
     }
 }
 
