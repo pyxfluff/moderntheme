@@ -1,0 +1,121 @@
+// pyxfluff 2025
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+.post-stream,
+.small-action .small-action-desc {
+  // not sure why actions are different from post-stream?
+  width: 100%;
+}
+
+.topic-body {
+  // full width support
+  width: 100%;
+}
+
+.post-menu-area {
+  @include ClearMenuNoRounding();
+
+  width: fit-content;
+  float: right;
+
+  padding: 5px;
+  margin-bottom: 0px;
+
+  padding-top: 0px;
+  margin-top: 0px;
+
+  border-radius: 0px 0px 6px 6px;
+
+  button {
+    border-radius: 4px;
+    transition: all 0.25s;
+    background: none !important;
+
+    &.toggle-like {
+      .svg {
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+.topic-footer-main-buttons .btn,
+controls ul li a,
+.btn-icon-text:not(.create):not(.danger):not(.btn-primary),
+.user-admin {
+  background: $BGPrimary !important;
+
+  &.create,
+  &.compose-pm,
+  &.chat-direct-message-btn {
+    color: var(--tertiary);
+  }
+}
+
+code {
+  background: transparent;
+}
+
+blockquote {
+  background: $BGPrimary !important;
+  border-radius: 4px 8px 8px 4px !important;
+
+  border-left: 4px solid $BGPrimary !important;
+}
+
+nav.post-controls .actions .double-button button.like,
+nav.post-controls .actions .double-button button.like .d-icon {
+  transition: all 0.25s;
+
+  &.d-hover .d-icon {
+    height: 1.25em;
+    width: 1.25em;
+  }
+}
+
+#suggested-topics-title,
+#related-topics-title {
+  @include ClearMenuNoRounding();
+
+  padding: 10px;
+  margin-bottom: 0px;
+  border-radius: 18px 18px 0px 0px;
+}
+
+.selected-posts {
+  @include ClearMenu();
+}
+
+.regular.contents,
+.topic-map,
+.topic-statuses:has(:not(:empty)) {
+  @include ClearMenuNoRounding();
+
+  border-radius: 8px;
+
+  &.contents {
+    border-radius: 6px 6px 0px 6px !important;
+  }
+}
+
+.topic-statuses:has(:not(:empty)) {
+  padding: 3px 10px 3px 10px;
+  margin-right: 5px;
+}
+
+.archetype-private_message .topic-map section {
+  background: transparent !important;
+}
+
+.cooked img {
+  border-radius: 8px;
+}
+
+.topic-list-item,
+.topic-list-item.visited .topic-list-data,
+.latest-topic-list-item.visited,
+.category-topic-link.visited {
+  background-color: transparent;
+}

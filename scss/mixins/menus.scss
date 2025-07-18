@@ -1,0 +1,18 @@
+// pyxfluff 2025
+
+@mixin ClearMenu() {
+    backdrop-filter: blur(3rem);
+    -webkit-backdrop-filter: blur(3rem);
+
+    background: $BGPrimary;
+    border-radius: 18px !important;
+    border: none !important;
+}
+
+@mixin ClearMenuNoRounding() {
+    backdrop-filter: blur(3rem);
+    -webkit-backdrop-filter: blur(3rem);
+
+    background: $BGPrimary;
+    border: none !important;
+}

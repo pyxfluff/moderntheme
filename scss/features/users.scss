@@ -1,0 +1,101 @@
+// pyxfluff 2025
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+.user-main {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #000 65%),
+    var(--profile-bg-img);
+
+  background-size: cover;
+  background-position: top;
+
+  padding: 10px;
+  border-radius: 18px;
+  overflow-x: hidden;
+
+  .about {
+    background: var(--profile-bg-img);
+    padding: 10px;
+
+    &.has-background .user-profile-image {
+      border-radius: 18px;
+
+      background: none !important;
+    }
+
+    .staff-counters {
+      @include ClearMenu();
+
+      margin-bottom: 5px;
+      color: var(--primary);
+      backdrop-filter: blur(1rem);
+    }
+
+    .details {
+      @include ClearMenu();
+
+      .primary {
+        margin: 10px;
+        margin-top: 0px !important;
+
+        .controls {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .details,
+  .user-content {
+    background: none;
+  }
+}
+
+.dashboard-next .nav::after,
+.dashboard-next .nav::before {
+  background: transparent !important;
+}
+
+.dropdown-menu,
+.user-menu {
+  @include ClearMenu();
+
+  .quick-access-panel ul {
+    @include ClearMenu();
+
+    .notification.read {
+      margin-bottom: 5px;
+      background: transparent;
+    }
+  }
+}
+
+.fk-d-menu__inner-content,
+.badge-card {
+  @include ClearMenu();
+}
+
+.user-card .card-content,
+.group-card .card-content {
+  backdrop-filter: blur(1rem);
+  background: transparent;
+  border-radius: 18px;
+}
+
+#user-card,
+.fk-d-menu {
+  border-radius: 18px !important;
+}
+
+.user-badge,
+.more-user-badges a,
+.reviewable-filters,
+.user {
+  @include ClearMenu();
+
+  details,
+  summary {
+    background: none !important;
+  }
+}

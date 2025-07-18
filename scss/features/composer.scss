@@ -1,0 +1,48 @@
+// pyxfluff 2025
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+#reply-control {
+  @include ClearMenu();
+  backdrop-filter: blur(2rem);
+
+  .d-editor-textarea-wrapper,
+  details,
+  input,
+  summary {
+    @include ClearMenu();
+    backdrop-filter: blur(2rem);
+
+    border: none;
+    border-color: transparent;
+  }
+
+  width: 95%;
+
+  .grippie {
+    border-radius: 18px 18px 0px 0px;
+  }
+
+  &.open {
+    margin-bottom: 25px;
+    box-shadow: 0 0px 40px rgba(0, 0, 0, 1);
+  }
+
+  details.composer-actions,
+  summary {
+    background: transparent !important;
+  }
+}
+
+.composer-popup {
+  @include BorderByOption("more");
+}
+
+@media screen and (min-width: 1475px) {
+  #reply-control {
+    transform: unset !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}

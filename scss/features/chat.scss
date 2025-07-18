@@ -1,0 +1,24 @@
+// pyxfluff 2025
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+.chat-drawer .chat-drawer-container {
+  @include ClearMenuNoRounding();
+
+  background: $BGPrimary !important;
+}
+
+.c-navbar-container {
+  background: $BGPrimary !important;
+
+  border-radius: 8px 8px 0px 0px;
+}
+
+.chat-message-container,
+.chat-transcript,
+controls ul li a,
+.c-footer,
+.boxed.white {
+  background: transparent !important;
+}
