@@ -1,7 +1,8 @@
 {
     "name": "Pyx's Modern Theme",
-    "about_url": "",
+    "about_url": "https://meta.discourse.org/t/pyxs-modern-theme/357665?u=darkpixlz",
     "license_url": "https://github.com/pyxfluff/moderntheme/blob/main/LICENSE",
     "author": "pyxfluff",
-    "component": false
+    "component": false,
+    "screenshots": ["screenshots/image.png"]
   }

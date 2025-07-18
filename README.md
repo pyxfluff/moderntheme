@@ -1,4 +1,6 @@
 # Pyx's Modern Theme
 ---
 
-In development.
+A modern, unibody Discourse theme with a dynamic background.
+
+[!Theme Creator screenshot](screenshots/image.png)
