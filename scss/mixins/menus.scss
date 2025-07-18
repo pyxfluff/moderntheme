@@ -16,3 +16,11 @@
     background: $BGPrimary;
     border: none !important;
 }
+
+@mixin BorderByOption($style) {
+  @if $style == "more" {
+    border-radius: 18px;
+  } @else {
+    border-radius: 8px;
+  }
+}

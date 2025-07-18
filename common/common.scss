@@ -1,13 +1,5 @@
 // pyxfluff 2024 - 2025
 
-@mixin BorderByOption($style) {
-  @if $style == "more" {
-    border-radius: 18px;
-  } @else {
-    border-radius: 8px;
-  }
-}
-
 // Theme initializers
 @import "features/admin";
 @import "features/chat";
