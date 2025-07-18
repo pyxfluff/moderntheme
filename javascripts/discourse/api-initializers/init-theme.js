@@ -1,5 +1,8 @@
-<script type="text/discourse-plugin" version="0.9">
+import { apiInitializer } from "discourse/lib/api";
+
+export default apiInitializer((api) => {
     api.onPageChange(() => {
+        // Add --profile-bg-img property
         let currentRouteParent = api.container.lookup("router:main").currentRoute?.parent;
         if (currentRouteParent.name.includes("user")) {
             let userBg = currentRouteParent.attributes.profile_background_upload_url;
@@ -10,7 +13,8 @@
                 document.documentElement.style.removeProperty('--profile-bg-img');
             }
         }
-        
+
+        // Replace twitter icon
         try {
             var twitter = document.querySelector('#fab-twitter');
 
@@ -25,4 +29,4 @@
             // safe to ignore
         }
     });
-</script>
+});
