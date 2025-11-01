@@ -37,6 +37,10 @@
             backdrop-filter: blur(1rem);
         }
 
+        #collapsed-info-panel dl {
+            margin-left: 8px;
+        }
+
         .details {
             @include ClearMenu();
 
