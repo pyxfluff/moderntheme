@@ -22,3 +22,19 @@ controls ul li a,
 .boxed.white {
   background: transparent !important;
 }
+
+.chat-message-creator__members {
+    @include ClearMenu()
+}
+
+.chat-message-creator__new-group-header {
+    @include ClearMenu();
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    input {
+        padding-left: 3px;
+        background-color: transparent;
+    }
+}
