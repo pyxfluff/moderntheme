@@ -4,113 +4,127 @@
 @import "mixins/variables";
 
 :root {
-  --d-hover: rgba(var(--primary-very-low-rgb), 0.3) !important;
-  --d-max-width: 90%;
-  --d-button-transition: all 0.2s linear;
+    --d-hover: rgba(var(--primary-very-low-rgb), 0.3) !important;
+    --d-max-width: 90%;
+    --d-button-transition: all 0.2s linear;
 }
 
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
-  @if $Background_Type == "tile" {
-    background-image: linear-gradient(
-        0deg,
-        rgba(var(--secondary-rgb), 1) 0%,
-        rgba(var(--secondary-rgb), 0.75) 100%
-      ),
-      url($Background_Image);
-    background-size: $Tile_Size;
-  } @else {
-    background-image: url($Background_Image) !important;
-    background-size: cover;
-  }
+    @if $Background_Type =="tile" {
+        background-image: linear-gradient(0deg,
+                rgba(var(--secondary-rgb), 1) 0%,
+                rgba(var(--secondary-rgb), 0.75) 100%),
+            url($Background_Image);
+        background-size: $Tile_Size;
+    }
+
+    @else {
+        background-image: url($Background_Image) !important;
+        background-size: cover;
+    }
 }
 
 div.not-found-container,
 #main-outlet-wrapper {
-  top: 15px;
-  left: 10px;
-  position: relative;
-  gap: 0px !important;
+    top: 15px;
+    left: 10px;
+    position: relative;
+    gap: 0px !important;
 
-  margin-top: var(--header-offset);
+    margin-top: var(--header-offset);
 
-  #main-outlet {
-    backdrop-filter: blur(3rem) !important;
-    -webkit-backdrop-filter: blur(3rem);
-    background: $BGPrimary !important;
+    #main-outlet {
+        backdrop-filter: blur(3rem) !important;
+        -webkit-backdrop-filter: blur(3rem);
+        background: $BGPrimary !important;
 
-    width: 95%;
-    border-radius: 0px 18px 18px 0px;
+        width: 95%;
 
-    padding-left: 10px;
-    margin-left: 0px;
+        padding-left: 10px;
+        margin-left: 0px;
 
-    padding-right: 10px;
-    margin-right: auto;
-
-    // margin-bottom: 50px;
-  }
-
-  .sidebar-wrapper,
-  .sidebar-sections {
-    backdrop-filter: blur(3rem) !important;
-    -webkit-backdrop-filter: blur(3rem);
-    background: $BGPrimary !important;
-
-    border-radius: 18px 0px 0px 0px;
-    margin-right: 0px;
-
-    .sidebar-container {
-        height: 100%;
+        padding-right: 10px;
+        margin-right: auto;
     }
-  }
+
+    body.has-sidebar-page & {
+        #main-outlet {
+            border-radius: 0px 18px 18px 0px;
+        }
+    }
+
+    body:not(.has-sidebar-page) & {
+        #main-outlet {
+            border-radius: 18px;
+        }
+    }
+
+    .sidebar-wrapper,
+    .sidebar-sections {
+        backdrop-filter: blur(3rem) !important;
+        -webkit-backdrop-filter: blur(3rem);
+        background: $BGPrimary !important;
+
+        border-radius: 18px 0px 0px 0px;
+        margin-right: 0px;
+
+        .sidebar-container {
+            height: 100%;
+        }
+    }
 }
 
 .d-header-wrap,
 body.no-ember .d-header {
-  @include BorderByOption("more");
-
-  top: 5px;
-  width: 100%;
-  margin-bottom: 15px;
-  margin-top: 5px;
-
-  text-align: center;
-  display: block;
-  margin: auto;
-  position: fixed;
-
-  .d-header,
-  &.d-header wrap {
     @include BorderByOption("more");
 
-    top: 4px;
+    top: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+
+    text-align: center;
+    display: block;
     margin: auto;
-    width: 75%;
+    position: fixed;
 
-    background: transparent;
+    .d-header,
+    &.d-header wrap {
+        @include BorderByOption("more");
 
-    .wrap {
-      @include ClearMenu();
+        top: 4px;
+        margin: auto;
+        width: 75%;
+
+        background: transparent;
+
+        .wrap {
+            @include ClearMenu();
+        }
     }
-  }
 }
 
 .powered-by-discourse {
-  margin-bottom: 3em;
-  border-radius: 0px 0px 1em 0px;
+    margin-bottom: 3em;
+    border-radius: 0px 0px 1em 0px;
 
-  background: $BGPrimary;
-  backdrop-filter: blur(2rem);
+    background: $BGPrimary;
+    backdrop-filter: blur(2rem);
 
-  .powered-by-discourse__content {
-    background: transparent;
-  }
+    .powered-by-discourse__content {
+        background: transparent;
+    }
 }
 
-.search-menu .search-input, .search-menu-container .search-input {
+.search-menu .search-input,
+.search-menu-container .search-input {
     @include ClearMenu()
+}
+
+profiler-results.profiler-top {
+    top: 0px !important
 }
