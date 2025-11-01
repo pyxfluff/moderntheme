@@ -48,9 +48,9 @@
     border: 0px;
 }
 
-.topic-footer-main-buttons .btn,
+.topic-footer-main-buttons .btn:not(.danger):not(.create),
 controls ul li a,
-.btn-icon-text:not(.create):not(.danger):not(.btn-primary),
+.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger),
 .user-admin {
     background: $BGPrimary !important;
 
@@ -133,5 +133,17 @@ nav.post-controls .actions .double-button button.like .d-icon {
     .dropdown-menu,
     .fk-d-menu__inner-content {
         background: transparent !important;
+    }
+}
+
+.topic-map {
+    border: 0px !important;
+
+    width: 100%;
+    max-width: unset !important;
+
+    .topic-map__contents {
+        margin-left: 7px;
+        margin-right: 7px;
     }
 }
