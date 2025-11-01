@@ -73,6 +73,8 @@
 .select-kit.single-select.dropdown-select-box.is-expanded .select-kit-body {
   @include ClearMenu();
 
+  background-color: rgba(var(--secondary-rgb), 0.5) !important;
+
   transform: none !important;
 }
 
