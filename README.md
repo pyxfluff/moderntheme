@@ -14,7 +14,7 @@ Please use the [Discourse Meta](https://meta.discourse.org/t/pyxs-modern-theme/3
 
 ## Issues
 
-Issues are mroe than welcome using the issues tab. Please make your title be as descriptive as possible, state the issue at hand, and show me visually what is happening that is not intended. I look into all issues when I can, please be patient.
+Issues are welcome using the issues tab. Please make your title be as descriptive as possible, state the issue at hand, and show me visually what is happening that is not intended. I look into all issues when I can, please be patient.
 
 ## Contributions
 

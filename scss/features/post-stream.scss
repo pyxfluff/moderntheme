@@ -115,7 +115,9 @@ nav.post-controls .actions .double-button button.like .d-icon {
     background: transparent !important;
 }
 
-.cooked img {
+.cooked img,
+img.diff-ins,
+img.diff-del {
     border-radius: 8px;
 }
 
@@ -146,4 +148,41 @@ nav.post-controls .actions .double-button button.like .d-icon {
         margin-left: 7px;
         margin-right: 7px;
     }
+}
+
+.modal.history-modal #display-modes .nav {
+    @include ClearMenu();
+}
+
+.edit-reason {
+    border: 5px solid var(--highlight-bg);
+    border-radius: 4px;
+}
+
+.meta,
+.lightbox-wrapper .d-icon {
+    @include ClearMenuNoRounding();
+
+    background-color: (var(--secondary-rgb), 0.5) !important;
+    color: var(--primary) !important;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.pswp__img {
+    border-radius: 8px;
+}
+
+.pswp__bg {
+    background: var(--lightbox-image);
+    background-size: cover;
+    filter: blur(8px);
+    //transition: 1s linear opacity !important;
+}
+
+.pswp--ui-visible .pswp__bg {
+    opacity: 1 !important
+}
+
+.pswp__scroll-wrap {
+    background: rgb(from var(--pswp-bg) r g b / 0.8)
 }

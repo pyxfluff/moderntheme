@@ -128,3 +128,13 @@ body.no-ember .d-header {
 profiler-results.profiler-top {
     top: 0px !important
 }
+
+.topic-list-item.visited, .latest-topic-list-item.visited, .category-topic-link.visited {
+    background: transparent;
+}
+
+.form-kit__control-input {
+    // i hate having to force stuff
+    border: none !important;
+    border-radius: 8px !important;
+}

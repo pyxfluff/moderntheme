@@ -1,0 +1,26 @@
+// pyxfluff 2025
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+.search-container {
+    summary:not(.select-kit-header),
+    details {
+        background: transparent !important;
+        backdrop-filter: none !important;
+    }
+
+    .select-kit-header,
+    input {
+        @include ClearMenu();
+
+        background-color: (var(--secondary-rgb), 0.5) !important
+    }
+
+    .search-header,
+    .search-bar,
+    .search-filters,
+    .search-advanced-filters {
+        background: transparent !important;
+    }
+}
