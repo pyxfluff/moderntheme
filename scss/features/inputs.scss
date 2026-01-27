@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -10,7 +10,6 @@ button,
 
 details,
 input,
-summary,
 pre,
 aside {
   &:not(pre code)
@@ -30,7 +29,9 @@ aside {
   :not(.toggle-like)
   :not(.topic-map__links-trigger)
   :not(.notifications-tracking-btn)
-  :not(#upgrade-all) {
+  :not(#upgrade-all)
+  :not(.btn-insert-table),
+.controls .btn.no-text {
   border-radius: 100% !important;
   aspect-ratio: 1;
 
@@ -60,4 +61,24 @@ aside {
 
   border-radius: 8px;
   opacity: 0.7;
+}
+
+.fk-d-tooltip__trigger .btn .btn-icon .no-text {
+    border-radius: 100%;
+    background-color: $BGPrimary;
+}
+
+.topic-footer-main-buttons .btn:not(.danger):not(.create),
+controls ul li a,
+.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger):not(.post-action-menu__show-replies),
+.user-admin,
+.user-controls a,
+.controls a.btn {
+    background: $BGPrimary !important;
+
+    &.create,
+    &.compose-pm,
+    &.chat-direct-message-btn {
+        color: var(--tertiary);
+    }
 }

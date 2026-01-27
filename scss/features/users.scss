@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -67,8 +67,30 @@
 }
 
 .dropdown-menu,
-.user-menu {
+.user-menu,
+.select-kit-collection {
     @include ClearMenu();
+
+    background-color: rgba(var(--secondary-rgb), 0.9);
+
+    .item-label {
+        // correct centered usernames
+        align-self: baseline;
+    }
+
+    .panel-body-bottom a {
+        @include ClearMenu();
+    }
+
+    .tabs-list .btn .d-icon {
+        border-radius: 100% !important;
+    }
+
+    // intentionally weird, .notification doesn't work idk why
+    .user-menu-button-all-notifications li:hover {
+        background-color: var(--primary-low) !important;
+        transition: all linear .25s
+    }
 
     .quick-access-panel ul {
         @include ClearMenu();
@@ -78,6 +100,10 @@
             background: transparent;
         }
     }
+}
+
+.menu-panel.drop-down {
+    top: 105%
 }
 
 .fk-d-menu__inner-content,
@@ -95,6 +121,14 @@
 #user-card,
 .fk-d-menu {
     border-radius: 18px !important;
+
+    button {
+        border-radius: 16px !important; 
+    }
+
+    .user-card-badge-link span.user-badge, .more-user-badges a {
+        background-color: $BGPrimary
+    }
 }
 
 .user-badge,
@@ -107,4 +141,9 @@
     summary {
         background: none !important;
     }
+}
+
+.post-list .post-list-item {
+    background: transparent;
+    border: 0px;
 }

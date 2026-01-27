@@ -10,7 +10,7 @@ A modern, unibody Discourse theme with a dynamic background.
 
 ## Discussion
 
-Please use the [Discourse Meta](https://meta.discourse.org/t/pyxs-modern-theme/357665/18) thread for concerns, feedback, and nice comments.
+Please use the [Discourse Meta](https://meta.discourse.org/t/pyxs-modern-theme/357665) thread for concerns, feedback, and nice comments.
 
 ## Issues
 

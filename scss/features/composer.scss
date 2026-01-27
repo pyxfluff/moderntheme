@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -45,4 +45,12 @@
     margin-right: auto !important;
     margin-left: auto !important;
   }
+}
+
+.composer-popup {
+    @include ClearMenu();
+}
+
+.emoji-picker__sections-nav, .emoji-picker__filter-container {
+    @include ClearMenuNoRounding();
 }

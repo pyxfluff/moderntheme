@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -170,4 +170,13 @@ div.edit-category .edit-category-title-bar {
 
 .theme-card__image-wrapper {
   @include ClearMenu();
+}
+
+.admin-controls {
+    @include ClearMenu();
+
+    nav, ::before, ::after {
+        background-color: transparent;
+        background: none;
+    }
 }

@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -21,9 +21,8 @@ img.avatar,
   opacity: 0.7;
 }
 
-.list-controls .combo-box .combo-box-header,
-.navigation-container ol li details {
-  background: none !important;
+.list-controls .combo-box .combo-box-header {
+    background: none;
 }
 
 .header-dropdown-toggle {

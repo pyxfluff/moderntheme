@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -37,4 +37,10 @@ controls ul li a,
         padding-left: 3px;
         background-color: transparent;
     }
+}
+
+.chat-notices__notice, .chat-notices .chat-retention-reminder {
+    @include ClearMenu();
+
+    background-color: rgba(var(--tertiary-rgb), .5);
 }

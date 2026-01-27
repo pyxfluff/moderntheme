@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -48,26 +48,16 @@
     border: 0px;
 }
 
-.topic-footer-main-buttons .btn:not(.danger):not(.create),
-controls ul li a,
-.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger),
-.user-admin {
-    background: $BGPrimary !important;
+code,
+aside.onebox {
+    @include ClearMenu();
 
-    &.create,
-    &.compose-pm,
-    &.chat-direct-message-btn {
-        color: var(--tertiary);
-    }
-}
-
-code {
-    background: transparent;
+    box-shadow: none;
 }
 
 blockquote {
-    background: $BGPrimary !important;
-    border-radius: 4px 8px 8px 4px !important;
+    @include ClearMenu();
+    border-radius: 6px 14px 14px 6px !important;
 
     border-left: 4px solid $BGPrimary !important;
 }
@@ -185,4 +175,28 @@ img.diff-del {
 
 .pswp__scroll-wrap {
     background: rgb(from var(--pswp-bg) r g b / 0.8)
+}
+
+.cooked details {
+    @include ClearMenu();
+
+    background-color: transparent !important;
+}
+
+.topic-navigation button {
+    @include ClearMenu();
+
+    aspect-ratio: 1;
+}
+
+.quote {
+    blockquote {
+        border-radius: 0px 0px 18px 18px !important;
+    }
+
+    div.title {
+        @include ClearMenuNoRounding();
+
+        border-radius: 18px 18px 0px 0px;
+    }
 }

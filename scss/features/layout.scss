@@ -1,4 +1,4 @@
-// pyxfluff 2025
+// pyxfluff 2026
 
 @import "mixins/menus";
 @import "mixins/variables";
@@ -31,7 +31,7 @@ body {
 div.not-found-container,
 #main-outlet-wrapper {
     top: 15px;
-    left: 10px;
+    left: 2%;
     position: relative;
     gap: 0px !important;
 
@@ -137,4 +137,25 @@ profiler-results.profiler-top {
     // i hate having to force stuff
     border: none !important;
     border-radius: 8px !important;
+}
+
+.d-page-header__description {
+    display: none;
+}
+
+.sidebar-search__input-container {
+    @include ClearMenu();
+
+    .sidebar-search__shortcut-hint {
+        border-radius: 100%
+    }
+}
+
+.group-details-container, .user-content {
+    @include ClearMenu();
+
+    input {
+        background-color: transparent;
+        border: 0
+    }
 }

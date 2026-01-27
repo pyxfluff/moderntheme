@@ -1,0 +1,49 @@
+// pyxfluff 2026
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+.jtabs-content {
+    margin: 10px;
+}
+
+:root {
+    --jss_border_color: var(--primary-500);
+    --jss_header_background: var(--header_background)
+}
+
+.jss_worksheet>tbody>tr>td,
+.jss_worksheet>thead>tr>td {
+    background-color: $BGPrimary;
+}
+
+.jcontextmenu {
+    @include ClearMenuForceful()
+}
+
+.jss_worksheet tbody tr:last-child,
+table.jss_worksheet {
+    border-bottom: 0 !important;
+}
+
+// try rounding it..
+.jss_selectall {
+    border-radius: 18px 0px 0px 0px;
+}
+
+.jss_worksheet thead tr:last-child td:last-child {
+    border-top-right-radius: 18px;
+    border-right: 0
+}
+
+.jss_worksheet tbody tr:last-child td.jss_row {
+    border-bottom-left-radius: 18px;
+}
+
+.jss_worksheet tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 18px;
+}
+
+.jss_worksheet td:last-child {
+    border-right: 0;
+}
