@@ -123,10 +123,11 @@
     border-radius: 18px !important;
 
     button {
-        border-radius: 16px !important; 
+        border-radius: 16px !important;
     }
 
-    .user-card-badge-link span.user-badge, .more-user-badges a {
+    .user-card-badge-link span.user-badge,
+    .more-user-badges a {
         background-color: $BGPrimary
     }
 }

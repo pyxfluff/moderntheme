@@ -4,53 +4,54 @@
 @import "mixins/variables";
 
 #reply-control {
-  @include ClearMenu();
-  backdrop-filter: blur(2rem);
-
-  .d-editor-textarea-wrapper,
-  details,
-  input,
-  summary {
     @include ClearMenu();
     backdrop-filter: blur(2rem);
 
-    border: none;
-    border-color: transparent;
-  }
+    .d-editor-textarea-wrapper,
+    details,
+    input,
+    summary {
+        @include ClearMenu();
+        backdrop-filter: blur(2rem);
 
-  width: 95%;
+        border: none;
+        border-color: transparent;
+    }
 
-  .grippie {
-    border-radius: 18px 18px 0px 0px;
-  }
+    width: 95%;
 
-  &.open {
-    margin-bottom: 25px;
-    box-shadow: 0 0px 40px rgba(0, 0, 0, 1);
-  }
+    .grippie {
+        border-radius: 18px 18px 0px 0px;
+    }
 
-  details.composer-actions,
-  summary {
-    background: transparent !important;
-  }
+    &.open {
+        margin-bottom: 25px;
+        box-shadow: 0 0px 40px rgba(0, 0, 0, 1);
+    }
+
+    details.composer-actions,
+    summary {
+        background: transparent !important;
+    }
 }
 
 .composer-popup {
-  @include BorderByOption("more");
+    @include BorderByOption("more");
 }
 
 @media screen and (min-width: 1475px) {
-  #reply-control {
-    transform: unset !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-  }
+    #reply-control {
+        transform: unset !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
 }
 
 .composer-popup {
     @include ClearMenu();
 }
 
-.emoji-picker__sections-nav, .emoji-picker__filter-container {
+.emoji-picker__sections-nav,
+.emoji-picker__filter-container {
     @include ClearMenuNoRounding();
 }

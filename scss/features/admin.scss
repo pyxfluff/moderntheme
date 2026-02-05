@@ -4,178 +4,179 @@
 @import "mixins/variables";
 
 .admin-area .sidebar-wrapper {
-  backdrop-filter: blur(3rem) !important;
-  -webkit-backdrop-filter: blur(3rem);
-  background: $BGPrimary !important;
+    backdrop-filter: blur(3rem) !important;
+    -webkit-backdrop-filter: blur(3rem);
+    background: $BGPrimary !important;
 }
 
 .admin-section-landing-item,
 .group-box,
 .admin-config-area-card,
 .form-kit__control-composer .d-editor-textarea-wrapper {
-  @include ClearMenu();
+    @include ClearMenu();
 }
 
 .wizard-container {
-  background: #131313a3;
+    background: #131313a3;
 
-  input[type],
-  .select-kit.combo-box .select-kit-header,
-  .d-editor-textarea-wrapper,
-  div.ac-wrap {
-    background: transparent;
-  }
+    input[type],
+    .select-kit.combo-box .select-kit-header,
+    .d-editor-textarea-wrapper,
+    div.ac-wrap {
+        background: transparent;
+    }
 }
 
 .img,
 .admin-new-feature-item__screenshot,
 .reviewable-item .post-body img {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .topic-list,
 .admin-detail {
-  @include ClearMenuNoRounding();
+    @include ClearMenuNoRounding();
 
-  border-radius: 0px 0px 18px 18px;
+    border-radius: 0px 0px 18px 18px;
 
-  &.pull-left {
-    border-radius: 0px 18px 18px 0px;
-  }
+    &.pull-left {
+        border-radius: 0px 18px 18px 0px;
+    }
 }
 
 .admin-site-settings-filter-controls {
-  @include ClearMenu();
+    @include ClearMenu();
 }
 
 .admin-controls {
-  margin-left: 5px;
-  margin-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 
-  .controls {
-    background: transparent !important;
-  }
+    .controls {
+        background: transparent !important;
+    }
 }
 
 .d-admin-filter {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .admin-nav {
-  @include ClearMenuNoRounding();
+    @include ClearMenuNoRounding();
 
-  border-radius: 18px 0px 0px 18px;
+    border-radius: 18px 0px 0px 18px;
 }
 
 .select-kit-body,
-.select-kit.single-select.dropdown-select-box.is-expanded
-  .select-kit-collection,
+.select-kit.single-select.dropdown-select-box.is-expanded .select-kit-collection,
 .select-kit.single-select.dropdown-select-box.is-expanded .select-kit-body {
-  @include ClearMenu();
+    @include ClearMenu();
 
-  background-color: rgba(var(--secondary-rgb), 0.5) !important;
+    background-color: rgba(var(--secondary-rgb), 0.5) !important;
 
-  transform: none !important;
+    transform: none !important;
 }
 
 .navigation-controls,
 .navigation-container {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 
-  ol {
-    margin: 0px;
-  }
-
-  button,
-  details {
-    @include ClearMenuNoRounding();
-
-    height: 100%;
-
-    border: none;
-    border-color: transparent;
-    border-radius: 8px 8px 0px 0px !important;
-
-    summary {
-      border: none !important;
+    ol {
+        margin: 0px;
     }
-  }
+
+    button,
+    details {
+        @include ClearMenuNoRounding();
+
+        height: 100%;
+
+        border: none;
+        border-color: transparent;
+        border-radius: 8px 8px 0px 0px !important;
+
+        summary {
+            border: none !important;
+        }
+    }
 }
 
 .edit-category-nav .nav {
-  @include ClearMenu();
-  background-color: $BGPrimary !important;
+    @include ClearMenu();
+    background-color: $BGPrimary !important;
 
-  li:first-child a {
-    border-radius: 18px 18px 0px 0px;
-  }
+    li:first-child a {
+        border-radius: 18px 18px 0px 0px;
+    }
 
-  li:last-child a {
-    border-radius: 0px 0px 18px 18px;
-  }
+    li:last-child a {
+        border-radius: 0px 0px 18px 18px;
+    }
 }
 
 div.edit-category .edit-category-title-bar {
-  @include ClearMenu();
+    @include ClearMenu();
 }
 
 .reviewable .reviewable-container .reviewable-list {
-  max-width: unset;
+    max-width: unset;
 
-  .reviewable-item {
-    @include ClearMenu();
+    .reviewable-item {
+        @include ClearMenu();
 
-    .reviewable-contents {
-      @include ClearMenu();
+        .reviewable-contents {
+            @include ClearMenu();
+        }
+
+        .post-body {
+            max-width: unset;
+        }
+
+        .reviewable-scores {
+            width: 100%;
+
+            .user {
+                backdrop-filter: none;
+                background: transparent;
+            }
+        }
     }
-
-    .post-body {
-      max-width: unset;
-    }
-
-    .reviewable-scores {
-      width: 100%;
-
-      .user {
-        backdrop-filter: none;
-        background: transparent;
-      }
-    }
-  }
 }
 
 .docker-manager {
-  .console-logs {
-    @include ClearMenu();
-  }
+    .console-logs {
+        @include ClearMenu();
+    }
 
-  .d-admin-row__content.repo.has-update {
-    background-color: rgba(var(--tertiary-very-low), 0.5);
-    backdrop-filter: blur(2rem);
+    .d-admin-row__content.repo.has-update {
+        background-color: rgba(var(--tertiary-very-low), 0.5);
+        backdrop-filter: blur(2rem);
 
-    border-left: solid 10px var(--tertiary);
-    border-radius: 7px 0px 0px 0px;
-  }
+        border-left: solid 10px var(--tertiary);
+        border-radius: 7px 0px 0px 0px;
+    }
 }
 
 .progress-bar {
-  @include ClearMenuNoRounding();
+    @include ClearMenuNoRounding();
 
-  border-radius: 6px;
-
-  .progress-bar-inner {
     border-radius: 6px;
-  }
+
+    .progress-bar-inner {
+        border-radius: 6px;
+    }
 }
 
 .theme-card__image-wrapper {
-  @include ClearMenu();
+    @include ClearMenu();
 }
 
 .admin-controls {
     @include ClearMenu();
 
-    nav, ::before, ::after {
+    nav,
+    ::before,
+    ::after {
         background-color: transparent;
         background: none;
     }

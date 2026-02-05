@@ -4,15 +4,15 @@
 @import "mixins/variables";
 
 .chat-drawer .chat-drawer-container {
-  @include ClearMenuNoRounding();
+    @include ClearMenuNoRounding();
 
-  background: $BGPrimary !important;
+    background: $BGPrimary !important;
 }
 
 .c-navbar-container {
-  background: $BGPrimary !important;
+    background: $BGPrimary !important;
 
-  border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
 }
 
 .chat-message-container,
@@ -20,7 +20,7 @@
 controls ul li a,
 .c-footer,
 .boxed.white {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .chat-message-creator__members {
@@ -39,7 +39,8 @@ controls ul li a,
     }
 }
 
-.chat-notices__notice, .chat-notices .chat-retention-reminder {
+.chat-notices__notice,
+.chat-notices .chat-retention-reminder {
     @include ClearMenu();
 
     background-color: rgba(var(--tertiary-rgb), .5);

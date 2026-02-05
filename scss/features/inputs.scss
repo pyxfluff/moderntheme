@@ -5,62 +5,49 @@
 
 button,
 .controls ul li a {
-  border-radius: 8px !important;
+    border-radius: 8px !important;
 }
 
 details,
 input,
 pre,
 aside {
-  &:not(pre code)
-  &:not(.search-term__input) {
-    @include ClearMenu();
-  }
+    &:not(pre code) &:not(.search-term__input) {
+        @include ClearMenu();
+    }
 }
 
-.btn.no-text
-  :not(.btn-transparent)
-  :not(.topic-map__views-trigger)
-  :not(.show-all)
-  :not(.profile-tab-btn)
-  :not(.topic-drafts-menu-trigger)
-  :not(.notifications-tracking-trigger)
-  :not(.edit-category)
-  :not(.toggle-like)
-  :not(.topic-map__links-trigger)
-  :not(.notifications-tracking-btn)
-  :not(#upgrade-all)
-  :not(.btn-insert-table),
+.btn.no-text :not(.btn-transparent) :not(.topic-map__views-trigger) :not(.show-all) :not(.profile-tab-btn) :not(.topic-drafts-menu-trigger) :not(.notifications-tracking-trigger) :not(.edit-category) :not(.toggle-like) :not(.topic-map__links-trigger) :not(.notifications-tracking-btn) :not(#upgrade-all) :not(.btn-insert-table),
 .controls .btn.no-text {
-  border-radius: 100% !important;
-  aspect-ratio: 1;
+    border-radius: 100% !important;
+    aspect-ratio: 1;
 
-  background: $BGPrimary;
+    background: $BGPrimary;
 }
 
 .modal,
 .mfp-container,
 .dialog-overlay {
-  backdrop-filter: blur(3rem);
+    backdrop-filter: blur(3rem);
 
-  .d-modal__container,
-  .dialog-content {
-    background: transparent;
-    border-radius: 18px;
-  }
+    .d-modal__container,
+    .dialog-content {
+        background: transparent;
+        border-radius: 18px;
+    }
 }
 
 .dialog-content {
-  background: transparent !important;
-  border-radius: 18px;
+    background: transparent !important;
+    border-radius: 18px;
 }
 
 .alert,
 .fk-d-tooltip__content {
-  backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
 
-  border-radius: 8px;
-  opacity: 0.7;
+    border-radius: 8px;
+    opacity: 0.7;
 }
 
 .fk-d-tooltip__trigger .btn .btn-icon .no-text {
@@ -75,6 +62,7 @@ controls ul li a,
 .user-controls a,
 .controls a.btn {
     background: $BGPrimary !important;
+
 
     &.create,
     &.compose-pm,

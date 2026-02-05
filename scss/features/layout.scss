@@ -129,7 +129,9 @@ profiler-results.profiler-top {
     top: 0px !important
 }
 
-.topic-list-item.visited, .latest-topic-list-item.visited, .category-topic-link.visited {
+.topic-list-item.visited,
+.latest-topic-list-item.visited,
+.category-topic-link.visited {
     background: transparent;
 }
 
@@ -151,7 +153,8 @@ profiler-results.profiler-top {
     }
 }
 
-.group-details-container, .user-content {
+.group-details-container,
+.user-content {
     @include ClearMenu();
 
     input {
