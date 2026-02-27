@@ -72,6 +72,14 @@ nav.post-controls .actions .double-button button.like .d-icon {
     }
 }
 
+.post-actions {
+    .post-action {
+        background-color: rgba(var(--secondary-rgb), 0.3);
+        border-radius: 0px 0px 0px 8px;
+        padding: 10px;
+    }
+}
+
 #suggested-topics-title,
 #related-topics-title {
     @include ClearMenuNoRounding();
