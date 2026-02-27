@@ -74,7 +74,6 @@
 
     background-color: rgba(var(--secondary-rgb), 0.5) !important;
 
-    transform: none !important;
 }
 
 .navigation-controls,
@@ -180,4 +179,94 @@ div.edit-category .edit-category-title-bar {
         background-color: transparent;
         background: none;
     }
+}
+
+// Yes, the review queue is admin.
+
+.review-item__primary-content {
+    border: 0px;
+
+    .review-item__header {
+        background: linear-gradient(to bottom, rgb(from var(--danger) r g b / 0.5), transparent 100%);
+        border-radius: 8px 8px 0px 0px;
+        color: var(--primary);
+        height: 60px;
+
+        .review-item__label-badges {
+            height: 100%;
+            align-content: center;
+        }
+
+        .review-item__status {
+            align-content: center;
+        }
+
+        .reviewable-created-date {
+            align-self: center;
+            color: var(--primary)
+        }
+
+        button svg {
+            color: var(--primary) !important
+        }
+    }
+
+    .review-item .reviewable-created-date {
+        color: var(--primary)
+    }
+
+    .review-item__status.--pending {
+        background-color: var(--highlight)
+    }
+
+    .review-item__post-content {
+        @include ClearMenu();
+    }
+
+    .reviewable-note-form {
+        background-color: transparent;
+    }
+
+    .form-kit__control-textarea {
+        @include ClearMenu();
+    }
+
+    .review-item__insights .nav-pills.action-list {
+        border: 0px;
+
+        li {
+            @include ClearMenuNoRounding();
+
+            border-radius: 16px 16px 0px 0px;
+        }
+    }
+
+    .reviewable-timeline .timeline-event {
+        background-color: transparent;
+    }
+
+    .timeline-events {
+        @include ClearMenuNoRounding();
+
+        border-radius: 0px 18px 18px 18px;
+    }
+}
+
+.sidebar-section-link-content-badge {
+    background-color: var(--highlight);
+    color: var(--secondary) !important;
+    border-radius: 8px;
+}
+
+.review-item__aside {
+
+    details,
+    summary {
+        border-radius: 18px !important;
+    }
+}
+
+.reviewable-filters {
+    // Core bug?? Idk but probably not..
+    z-index: 999
 }
