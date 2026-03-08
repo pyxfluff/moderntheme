@@ -59,7 +59,7 @@ div.not-found-container,
 
     body:not(.has-sidebar-page) & {
         #main-outlet {
-            border-radius: 18px;
+            border-radius: 18px 18px 18px 0px;
         }
     }
 
@@ -100,6 +100,7 @@ body.no-ember .d-header {
         margin: auto;
         width: 75%;
 
+        box-shadow: unset;
         background: transparent;
 
         .wrap {
@@ -157,8 +158,55 @@ profiler-results.profiler-top {
 .user-content {
     @include ClearMenu();
 
+    padding: 5px;
+
     input {
         background-color: transparent;
         border: 0
     }
+}
+
+.list-controls,
+#list-area {
+    background: transparent
+}
+
+#create-topic {
+    color: white;
+}
+
+.navigation-categories .category-list {
+    @include ClearMenuNoRounding();
+
+    border-radius: 0px 18px 18px 0px
+}
+
+.categories-and-latest .column:not(.column.categories) {
+    @include ClearMenuNoRounding();
+
+    border-radius: 18px 0px 18px 18px;
+}
+
+.topic-list-item {
+    border-bottom: 0px
+}
+
+.topic-replies-toggle-wrapper {
+    @include ClearMenuNoRounding();
+
+    border-radius: 0px 0px 8px 0px;
+}
+
+#main-outlet>.regular {
+    background: transparent;
+}
+
+@if ($Disable_Cursor) {
+    * {
+        cursor: default !important
+    }
+}
+
+.body-page {
+    background: transparent;
 }

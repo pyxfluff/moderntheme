@@ -141,6 +141,8 @@ img.diff-del {
 
     width: 100%;
     max-width: unset !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     .topic-map__contents {
         margin-left: 7px;
@@ -191,7 +193,7 @@ img.diff-del {
     background-color: transparent !important;
 }
 
-.topic-navigation button {
+.topic-navigation button:not(.back-button) {
     @include ClearMenu();
 
     aspect-ratio: 1;
@@ -208,3 +210,29 @@ img.diff-del {
         border-radius: 18px 18px 0px 0px;
     }
 }
+
+@if ($Remove_Default_Borders) {
+    .btn {
+        border: 0px !important
+    }
+}
+
+.post-notice {
+    width: 100%;
+    max-width: unset;
+    margin-top: 10px;
+
+    border: 0px !important;
+    border-radius: 8px;
+    background: rgb(from var(--tertiary-very-low) r g b / 0.5);
+}
+
+.topic-avatar {
+    border: 0px;
+}
+
+/* padding-block: 0;
+  height: var(--button-height);
+  padding-inline: var(--space-2);
+}
+  */

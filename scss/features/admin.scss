@@ -117,26 +117,30 @@ div.edit-category .edit-category-title-bar {
     @include ClearMenu();
 }
 
-.reviewable .reviewable-container .reviewable-list {
-    max-width: unset;
+.reviewable {
+    background: transparent;
 
-    .reviewable-item {
-        @include ClearMenu();
+    .reviewable-container .reviewable-list {
+        max-width: unset;
 
-        .reviewable-contents {
+        .reviewable-item {
             @include ClearMenu();
-        }
 
-        .post-body {
-            max-width: unset;
-        }
+            .reviewable-contents {
+                @include ClearMenu();
+            }
 
-        .reviewable-scores {
-            width: 100%;
+            .post-body {
+                max-width: unset;
+            }
 
-            .user {
-                backdrop-filter: none;
-                background: transparent;
+            .reviewable-scores {
+                width: 100%;
+
+                .user {
+                    backdrop-filter: none;
+                    background: transparent;
+                }
             }
         }
     }
@@ -269,4 +273,16 @@ div.edit-category .edit-category-title-bar {
 .reviewable-filters {
     // Core bug?? Idk but probably not..
     z-index: 999
+}
+
+.d-admin-filter input {
+    @include ClearMenu();
+}
+
+.directory-table__body {
+    @include ClearMenu();
+
+    * {
+        border: 0px
+    }
 }

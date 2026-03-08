@@ -70,3 +70,11 @@ controls ul li a,
         color: var(--tertiary);
     }
 }
+
+button, summary {
+    transition: background linear .15s;
+}
+
+.select-kit-header.combo-box-header, .select-kit.multi-select .multi-select-header, .select-kit.multi-select {
+    @include ClearMenu()
+}

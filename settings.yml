@@ -1,6 +1,6 @@
-Is_Cursor_Active:
+Disable_Cursor:
    default: false
-   description: "Enable the pointer to change states."
+   description: "Legacy setting. When enabled, the cursor will not change states over buttons/text boxes."
    type: bool
 
 Background_Image:
@@ -25,3 +25,7 @@ Post_Tags:
    default: true
    description: "Enables Staff tag next to admins and moderators, and \"OP\" next to the topic owner."
    type: bool
+
+Remove_Default_Borders:
+   default: true
+   description: "(EXPERIMENTAL) If enabled, all borders added by the default/\"foundation\" on buttons will be removed to conform to the theme's style. Disable if this causes problems for your forum."

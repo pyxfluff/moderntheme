@@ -122,6 +122,10 @@
 .fk-d-menu {
     border-radius: 18px !important;
 
+    &.user-card {
+        background: transparent;
+    }
+
     button {
         border-radius: 16px !important;
     }
@@ -135,7 +139,7 @@
 .user-badge,
 .more-user-badges a,
 .reviewable-filters,
-.user {
+.user:not(.directory-table__row) {
     @include ClearMenu();
 
     details,

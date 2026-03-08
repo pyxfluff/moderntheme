@@ -25,3 +25,9 @@
         background: transparent !important;
     }
 }
+
+.search-menu-container .menu-panel {
+    @include ClearMenu();
+
+    top: 110% !important
+}
