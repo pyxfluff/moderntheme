@@ -231,6 +231,10 @@ img.diff-del {
     border: 0px;
 }
 
+.liked-users-list__container {
+    overflow-x: hidden;
+}
+
 /* padding-block: 0;
   height: var(--button-height);
   padding-inline: var(--space-2);
