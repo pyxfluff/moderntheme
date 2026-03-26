@@ -4,11 +4,16 @@
 @import "mixins/variables";
 
 .search-container {
+    background: transparent;
 
     summary:not(.select-kit-header),
     details {
         background: transparent !important;
         backdrop-filter: none !important;
+    }
+
+    .search-advanced-filters {
+        @include ClearMenu();
     }
 
     .select-kit-header,
@@ -21,7 +26,8 @@
     .search-header,
     .search-bar,
     .search-filters,
-    .search-advanced-filters {
+    .search-advanced-filters,
+    .search-info {
         background: transparent !important;
     }
 }

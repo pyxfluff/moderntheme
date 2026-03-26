@@ -28,7 +28,7 @@ aside {
 .modal,
 .mfp-container,
 .dialog-overlay {
-    backdrop-filter: blur(3rem);
+    backdrop-filter: blur($PrimaryBlurFactor);
 
     .d-modal__container,
     .dialog-content {
@@ -57,7 +57,7 @@ aside {
 
 .topic-footer-main-buttons .btn:not(.danger):not(.create),
 controls ul li a,
-.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger):not(.post-action-menu__show-replies),
+.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger):not(.post-action-menu__show-replies):not(.select-kit-header),
 .user-admin,
 .user-controls a,
 .controls a.btn {
@@ -71,10 +71,36 @@ controls ul li a,
     }
 }
 
-button, summary {
+button,
+summary {
     transition: background linear .15s;
 }
 
-.select-kit-header.combo-box-header, .select-kit.multi-select .multi-select-header, .select-kit.multi-select {
+.select-kit-header.combo-box-header,
+.select-kit.multi-select .multi-select-header,
+.select-kit.multi-select {
     @include ClearMenu()
+}
+
+.composer-toggle-switch__slider {
+    border-radius: 18px;
+    background: $BGPrimary;
+
+    span.--active {
+        border-radius: 100%;
+    }
+}
+
+.composer-toggle-switch__slider {
+    background: var(--d-hover);
+}
+
+.d-editor-preview {
+    border-radius: 18px;
+}
+
+.d-editor-textarea-wrapper,
+.groups-form input,
+.groups-form details {
+    @include ClearMenuNoBlur()
 }

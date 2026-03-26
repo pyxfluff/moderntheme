@@ -38,8 +38,8 @@ div.not-found-container,
     margin-top: var(--header-offset);
 
     #main-outlet {
-        backdrop-filter: blur(3rem) !important;
-        -webkit-backdrop-filter: blur(3rem);
+        backdrop-filter: blur($PrimaryBlurFactor) !important;
+        -webkit-backdrop-filter: blur($PrimaryBlurFactor);
         background: $BGPrimary !important;
 
         width: 95%;
@@ -65,15 +65,25 @@ div.not-found-container,
 
     .sidebar-wrapper,
     .sidebar-sections {
-        backdrop-filter: blur(3rem) !important;
-        -webkit-backdrop-filter: blur(3rem);
+        backdrop-filter: blur($PrimaryBlurFactor) !important;
+        -webkit-backdrop-filter: blur($PrimaryBlurFactor);
         background: $BGPrimary !important;
 
         border-radius: 18px 0px 0px 0px;
         margin-right: 0px;
 
+        /*
+        // this never works but i still wanna figure it out... 
+            height: 100% !important;
+            overflow-y: scroll;
+
+            .sidebar-container {
+                height: 95vh !important;
+            }
+        */
+
         .sidebar-container {
-            height: 100%;
+            height: 100% !important;
         }
     }
 }
@@ -82,7 +92,7 @@ div.not-found-container,
 body.no-ember .d-header {
     @include BorderByOption("more");
 
-    top: 5px;
+    top: 9px;
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -181,6 +191,11 @@ profiler-results.profiler-top {
     border-radius: 0px 18px 18px 0px
 }
 
+.category-breadcrumb summary {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
 .categories-and-latest .column:not(.column.categories) {
     @include ClearMenuNoRounding();
 
@@ -207,6 +222,38 @@ profiler-results.profiler-top {
     }
 }
 
-.body-page {
+// Why this is a separate class beats me..
+.account-created-page,
+.activate-account-page,
+body.login-page .d-header,
+body.signup-page .d-header,
+body.invite-page .d-header,
+body.password-reset-page .d-header,
+body.activate-account-page .d-header {
+    background: unset;
+}
+
+.account-created-page .main-outlet .activate-account-page .main-outlet {
+    backdrop-filter: none !important;
+    background-color: transparent !important;
+}
+
+.activate-account {
+    @include ClearMenu();
+}
+
+.container.groups-index,
+.container.badges {
     background: transparent;
+}
+
+.groups-header-filters-name,
+.groups-header-filters summary {
+    @include ClearMenuNoBlur();
+
+    background-color: $BGPrimary !important;
+}
+
+.body-page {
+    max-width: unset;
 }

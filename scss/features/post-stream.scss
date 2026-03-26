@@ -17,7 +17,7 @@
 }
 
 .post-menu-area {
-    background-color: rgba(var(--secondary-rgb), 0.3);
+    background-color: $BGPrimary;
 
     width: fit-content;
     float: right;
@@ -50,13 +50,13 @@
 
 code,
 aside.onebox {
-    @include ClearMenu();
+    @include ClearMenuNoBlur();
 
     box-shadow: none;
 }
 
 blockquote {
-    @include ClearMenu();
+    @include ClearMenuNoBlur();
     border-radius: 6px 14px 14px 6px !important;
 
     border-left: 4px solid $BGPrimary !important;
@@ -74,7 +74,7 @@ nav.post-controls .actions .double-button button.like .d-icon {
 
 .post-actions {
     .post-action {
-        background-color: rgba(var(--secondary-rgb), 0.3);
+        background-color: $BGPrimary;
         border-radius: 0px 0px 0px 8px;
         padding: 10px;
     }
@@ -96,8 +96,8 @@ nav.post-controls .actions .double-button button.like .d-icon {
 .regular.contents,
 .topic-map,
 .topic-statuses:has(:not(:empty)) {
-    background-color: rgba(var(--secondary-rgb), 0.3);
-    border-radius: 8px;
+    background-color: $BGPrimary;
+    border-radius: 14px;
 
     &.contents {
         border-radius: 6px 6px 0px 6px !important;
@@ -240,3 +240,46 @@ img.diff-del {
   padding-inline: var(--space-2);
 }
   */
+
+// PMs 
+.body-page,
+.private_message {
+    background: transparent;
+}
+
+.archetype-private_message .post__body {
+    .regular.contents {
+        border: 0px;
+
+        .post-menu-area {
+            margin: 0px;
+        }
+    }
+
+    .post__actions {
+        margin: 0px;
+    }
+}
+
+.archetype-private_message .post--current-user .post__menu-area,
+.archetype-private_message .current-user-post .regular.contents {
+    background: rgb(from var(--tertiary-very-low) r g b / 0.5)
+}
+
+.participants .user {
+    @include ClearMenuForceful()
+}
+
+.archetype-private_message .topic-map .participants,
+.archetype-private_message .topic-map section {
+    margin: 0px;
+    padding: 0px;
+}
+
+.quote-button {
+    background: transparent;
+
+    button {
+        background: transparent !important;
+    }
+}

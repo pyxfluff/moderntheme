@@ -4,8 +4,8 @@
 @import "mixins/variables";
 
 .admin-area .sidebar-wrapper {
-    backdrop-filter: blur(3rem) !important;
-    -webkit-backdrop-filter: blur(3rem);
+    backdrop-filter: blur($PrimaryBlurFactor) !important;
+    -webkit-backdrop-filter: blur($PrimaryBlurFactor);
     background: $BGPrimary !important;
 }
 

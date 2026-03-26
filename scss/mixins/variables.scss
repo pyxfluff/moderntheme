@@ -1,7 +1,9 @@
 // pyxfluff 2026
 
 $BGPrimary: rgba(var(--secondary-rgb), 0.5);
+$PrimaryBlurFactor: 3rem;
 
 :root {
-    --twitter: #1398CD
+    --twitter: #1398CD;
+    --d-content-background: transparent // does not work sadly
 }
