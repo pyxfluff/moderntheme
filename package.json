@@ -1,9 +1,9 @@
 {
   "name": "pyx-modern-theme",
-  "version": "5.3",
+  "version": "5.4",
   "repository": "pyxfluff/moderntheme",
   "author": "pyxfluff",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "devDependencies": {
     "eslint-config-discourse": "^3.2.0"
   }
