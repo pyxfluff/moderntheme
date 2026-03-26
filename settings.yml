@@ -23,7 +23,7 @@ Tile_Size:
 
 PrimaryBlurFactor:
    default: "3rem"
-   description: "Size for the tile background type. Will only work if Background Type is set to tile. WARNING: You must include 'px' at the end of it, or it wont work!"
+   description: "The radius of the blur for menus, modals, and the body. Any standard css unit will work."
    type: string
    
 Post_Tags:
