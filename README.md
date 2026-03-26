@@ -18,4 +18,4 @@ Issues are welcome using the issues tab. Please make your title be as descriptiv
 
 ## Contributions
 
-Pull requests for fixes or style updates are also welcome as long as they do not tweak the visual style too much. PRs/issues should be reviewed within a couple of days.
+Pull requests for fixes or style updates are also welcome as long as they do not tweak the visual style too much. PRs/issues should be reviewed within a couple of days. **Direct AI generated commits will be DENIED INSTANTLY. DO NOT SUBMIT 100% AI-GENERATED COMMITS.**
