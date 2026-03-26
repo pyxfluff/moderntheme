@@ -283,3 +283,35 @@ img.diff-del {
         background: transparent !important;
     }
 }
+
+@if $Post_Tags =="true" {
+    span.staff a:after {
+        content: "Staff";
+
+        @include BorderByOption("less");
+
+        color: white;
+        background-color: #1a1a1a;
+
+        margin-left: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+
+        display: inline-block;
+    }
+
+    .topic-owner .topic-meta-data div.names span.first:after {
+        content: "OP";
+
+        @include BorderByOption("less");
+
+        color: white;
+        background-color: #1a1a1a;
+
+        margin-left: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+
+        display: inline-block;
+    }
+}
