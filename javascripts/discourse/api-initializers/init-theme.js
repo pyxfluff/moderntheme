@@ -1,5 +1,7 @@
 import { apiInitializer } from "discourse/lib/api";
 
+const enableXreplace = false;
+
 export default apiInitializer((api) => {
   api.onPageChange(() => {
     // Add --profile-bg-img property
@@ -26,8 +28,6 @@ export default apiInitializer((api) => {
           try {
             var twitter = document.querySelector("#fab-x-twitter");
 
-            console.log(twitter);
-
             if (twitter) {
               twitter
                 .querySelector("path")
@@ -44,7 +44,7 @@ export default apiInitializer((api) => {
               );
             }
           } catch (e) {
-            console.log(e)
+            //console.log(e)
             // safe to ignore
           }
 
