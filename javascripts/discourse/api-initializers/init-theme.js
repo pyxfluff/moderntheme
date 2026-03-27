@@ -19,8 +19,9 @@ export default apiInitializer((api) => {
         document.documentElement.style.removeProperty("--profile-bg-img");
       }
     }
+  });
 
-    document.addEventListener(
+  document.addEventListener(
       "click",
       () => {
         setTimeout(() => {
@@ -64,5 +65,4 @@ export default apiInitializer((api) => {
       },
       100
     );
-  });
 });
