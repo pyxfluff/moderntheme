@@ -362,3 +362,7 @@ p.assigned-to {
         border-radius: 12px;
     }
 }
+
+.who-voted {
+    @include ClearMenu()
+}
