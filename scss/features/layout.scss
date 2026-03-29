@@ -92,7 +92,8 @@ div.not-found-container,
 body.no-ember .d-header {
     @include BorderByOption("more");
 
-    top: 9px;
+    //top: calc(9px + var(--theme-warning-banner-height));
+    top: $HeaderOffset;
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -257,4 +258,20 @@ body.activate-account-page .d-header {
 
 .body-page {
     max-width: unset;
+}
+
+.broken-theme-alert-banner {
+    position: sticky;
+    top: calc(var(--header-offset) + $HeaderOffset);
+
+    background: rgb(from var(--danger) r g b / 0.5);
+    backdrop-filter: blur(2rem);
+
+    //width: var(--header-width);
+    width: 70%;
+    border-radius: 18px;
+
+    text-align: center;
+    display: block;
+    margin: auto;
 }
