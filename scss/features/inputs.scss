@@ -57,7 +57,7 @@ aside {
 
 .topic-footer-main-buttons .btn:not(.danger):not(.create),
 controls ul li a,
-.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger):not(.post-action-menu__show-replies):not(.select-kit-header),
+.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger):not(.post-action-menu__show-replies):not(.select-kit-header):not(.dropdown-menu__item button),
 .user-admin,
 .user-controls a,
 .controls a.btn {
@@ -102,5 +102,22 @@ summary {
 .d-editor-textarea-wrapper,
 .groups-form input,
 .groups-form details {
-    @include ClearMenuNoBlur()
+    @include ClearMenuNoBlur();
+}
+
+.d-modal__body {
+
+    textarea,
+    .select-kit.combo-box .select-kit-header,
+    details summary,
+    input {
+        @include ClearMenuNoBlur();
+
+        backdrop-filter: none !important;
+    }
+
+    details {
+        backdrop-filter: none !important;
+        background: transparent !important
+    }
 }

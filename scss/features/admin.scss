@@ -37,10 +37,11 @@
 .admin-detail {
     @include ClearMenuNoRounding();
 
+    width: 81%;
     border-radius: 0px 0px 18px 18px;
 
     &.pull-left {
-        border-radius: 0px 18px 18px 0px;
+        border-radius: 18px
     }
 }
 
@@ -51,6 +52,7 @@
 .admin-controls {
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 10px;
 
     .controls {
         background: transparent !important;
@@ -62,9 +64,17 @@
 }
 
 .admin-nav {
-    @include ClearMenuNoRounding();
+    @include ClearMenu();
 
-    border-radius: 18px 0px 0px 18px;
+    margin-right: 10px;
+
+    .nav.nav-stacked {
+
+        li:first-child a,
+        li:last-child a {
+            border-radius: 18px 18px 0px 0px;
+        }
+    }
 }
 
 .select-kit-body,
@@ -151,12 +161,21 @@ div.edit-category .edit-category-title-bar {
         @include ClearMenu();
     }
 
-    .d-admin-row__content.repo.has-update {
+    * {
+        border: 0px
+    }
+
+    .d-table__row.repo.has-update {
         background-color: rgba(var(--tertiary-very-low), 0.5);
         backdrop-filter: blur(2rem);
 
         border-left: solid 10px var(--tertiary);
         border-radius: 7px 0px 0px 0px;
+    }
+
+    .d-table__row {
+        border-radius: 18px;
+        margin-top: 1em
     }
 }
 
@@ -284,5 +303,91 @@ div.edit-category .edit-category-title-bar {
 
     * {
         border: 0px
+    }
+}
+
+.admin-contents.dashboard.general {
+
+    .misc,
+    .user-metrics,
+    .activity-metrics {
+        @include ClearMenuNoBlur();
+
+        padding: 1em;
+    }
+
+    .user-metrics {
+        margin-bottom: 2em;
+    }
+
+    .counters-list * {
+        border: 0px !important;
+    }
+}
+
+.sidebar-search {
+
+    button,
+    input {
+        background: transparent !important;
+    }
+}
+
+.filter-input-container {
+    @include ClearMenuNoBlur();
+
+    input {
+        background: transparent;
+    }
+}
+
+.upcoming-changes-table {
+    tr {
+        display: none;
+    }
+
+    tbody {
+        border: 0px;
+    }
+
+    .upcoming-change-row {
+        @include ClearMenu();
+
+        margin-bottom: 1em;
+        display: block;
+        width: 100%;
+
+        select {
+            @include ClearMenuNoBlur();
+        }
+    }
+}
+
+.inline-form input {
+    background: transparent;
+    border: 0px;
+}
+
+.admin-changes-banner {
+    @include ClearMenu()
+}
+
+.input-setting-string, .input-setting-integer, .simply-list-input input, .form-kit__field textarea {
+    @include ClearMenuNoBlur();
+}
+
+.color-palette__preview {
+    border-radius: 18px 18px 0px 0px;
+}
+
+.admin-area .form-kit__control-input, .admin-area select {
+    @include ClearMenuNoBlur();
+}
+
+.admin-search-modal .admin-search__input-container {
+    background: transparent;
+
+    div {
+        border-radius: 18px;
     }
 }

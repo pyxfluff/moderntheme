@@ -59,7 +59,7 @@ blockquote {
     @include ClearMenuNoBlur();
     border-radius: 6px 14px 14px 6px !important;
 
-    border-left: 4px solid $BGPrimary !important;
+    //border-left: 4px solid $BGPrimary !important;
 }
 
 nav.post-controls .actions .double-button button.like,
@@ -313,5 +313,52 @@ img.diff-del {
         padding-right: 4px;
 
         display: inline-block;
+    }
+}
+
+// many plugins .....
+
+aside.accepted-answer {
+    padding: var(--space-4) var(--topic-body-width-padding) var(--space-1) var(--topic-body-width-padding);
+    margin: 0px;
+}
+
+.more-topics__container {
+    max-width: 100%;
+}
+
+p.assigned-to {
+    @include ClearMenu();
+
+    margin: var(--space-4) var(--topic-body-width-padding) var(--space-1) var(--topic-body-width-padding);
+    padding: 15px;
+}
+
+.voting-wrapper {
+    .vote-count-wrapper {
+        @include ClearMenuNoBlur();
+
+        border-radius: 18px 18px 0px 0px !important;
+    }
+
+    button {
+        border-radius: 0px 0px 18px 18px !important;
+        margin-top: 0px;
+    }
+}
+
+.topic-voting-menu-content {
+    .fk-d-menu__inner-content {
+        padding: 5px;
+    }
+
+    .dropdown-menu {
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+    }
+
+    .topic-voting-menu__title,
+    .see-votes {
+        border-radius: 12px;
     }
 }
