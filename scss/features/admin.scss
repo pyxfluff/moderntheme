@@ -33,11 +33,20 @@
     border-radius: 8px;
 }
 
-.topic-list,
 .admin-detail {
     @include ClearMenuNoRounding();
 
     width: 81%;
+    border-radius: 0px 0px 18px 18px;
+
+    &.pull-left {
+        border-radius: 18px
+    }
+}
+
+.topic-list {
+    @include ClearMenuNoRounding();
+
     border-radius: 0px 0px 18px 18px;
 
     &.pull-left {
