@@ -4,76 +4,76 @@
 @import "mixins/variables";
 
 :root {
-    --d-hover: rgba(var(--primary-very-low-rgb), 0.3) !important;
-    --d-max-width: 90%;
-    --admin-content-max-width: 100%
-    --d-button-transition: all 0.2s linear;
+  --d-hover: rgba(var(--primary-very-low-rgb), 0.3) !important;
+  --d-max-width: 90%;
+  --admin-content-max-width: 100% --d-button-transition: all 0.2s linear;
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    @if $Background_Type =="tile" {
-        background-image: linear-gradient(0deg,
-                rgba(var(--secondary-rgb), 1) 0%,
-                rgba(var(--secondary-rgb), 0.75) 100%),
-            url($Background_Image);
-        background-size: $Tile_Size;
-    }
-
-    @else {
-        background-image: url($Background_Image) !important;
-        background-size: cover;
-    }
+  @if $Background_Type == "tile" {
+    background-image:
+      linear-gradient(
+        0deg,
+        rgba(var(--secondary-rgb), 1) 0%,
+        rgba(var(--secondary-rgb), 0.75) 100%
+      ),
+      url($Background_Image);
+    background-size: $Tile_Size;
+  } @else {
+    background-image: url($Background_Image) !important;
+    background-size: cover;
+  }
 }
 
 div.not-found-container,
 #main-outlet-wrapper {
-    top: 15px;
-    left: 2%;
-    position: relative;
-    gap: 0px !important;
+  top: 15px;
+  left: 2%;
+  position: relative;
+  gap: 0px !important;
 
-    margin-top: var(--header-offset);
+  margin-top: var(--header-offset);
 
+  #main-outlet {
+    backdrop-filter: blur($PrimaryBlurFactor) !important;
+    -webkit-backdrop-filter: blur($PrimaryBlurFactor);
+    background: $BGPrimary !important;
+
+    width: 95%;
+
+    padding-left: 10px;
+    margin-left: 0px;
+
+    padding-right: 10px;
+    margin-right: auto;
+  }
+
+  body.has-sidebar-page & {
     #main-outlet {
-        backdrop-filter: blur($PrimaryBlurFactor) !important;
-        -webkit-backdrop-filter: blur($PrimaryBlurFactor);
-        background: $BGPrimary !important;
-
-        width: 95%;
-
-        padding-left: 10px;
-        margin-left: 0px;
-
-        padding-right: 10px;
-        margin-right: auto;
+      border-radius: 0px 18px 18px 0px;
     }
+  }
 
-    body.has-sidebar-page & {
-        #main-outlet {
-            border-radius: 0px 18px 18px 0px;
-        }
+  body:not(.has-sidebar-page) & {
+    #main-outlet {
+      border-radius: 18px 18px 18px 0px;
     }
+  }
 
-    body:not(.has-sidebar-page) & {
-        #main-outlet {
-            border-radius: 18px 18px 18px 0px;
-        }
-    }
+  .sidebar-wrapper,
+  .sidebar-sections {
+    backdrop-filter: blur($PrimaryBlurFactor) !important;
+    -webkit-backdrop-filter: blur($PrimaryBlurFactor);
+    background: $BGPrimary !important;
 
-    .sidebar-wrapper,
-    .sidebar-sections {
-        backdrop-filter: blur($PrimaryBlurFactor) !important;
-        -webkit-backdrop-filter: blur($PrimaryBlurFactor);
-        background: $BGPrimary !important;
+    border-radius: 18px 0px 0px 0px;
+    margin-right: 0px;
 
-        border-radius: 18px 0px 0px 0px;
-        margin-right: 0px;
-
-        /*
+    /*
         // this never works but i still wanna figure it out... 
             height: 100% !important;
             overflow-y: scroll;
@@ -83,145 +83,145 @@ div.not-found-container,
             }
         */
 
-        .sidebar-container {
-            height: 100% !important;
-        }
+    .sidebar-container {
+      height: 100% !important;
     }
+  }
 }
 
 .d-header-wrap,
 body.no-ember .d-header {
+  @include BorderByOption("more");
+
+  //top: calc(9px + var(--theme-warning-banner-height));
+  top: $HeaderOffset;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+
+  text-align: center;
+  display: block;
+  margin: auto;
+  position: fixed;
+
+  .d-header,
+  &.d-header wrap {
     @include BorderByOption("more");
 
-    //top: calc(9px + var(--theme-warning-banner-height));
-    top: $HeaderOffset;
-    width: 100%;
-    margin-bottom: 15px;
-    margin-top: 5px;
-
-    text-align: center;
-    display: block;
+    top: 4px;
     margin: auto;
-    position: fixed;
+    width: 75%;
 
-    .d-header,
-    &.d-header wrap {
-        @include BorderByOption("more");
+    box-shadow: unset;
+    background: transparent;
 
-        top: 4px;
-        margin: auto;
-        width: 75%;
-
-        box-shadow: unset;
-        background: transparent;
-
-        .wrap {
-            @include ClearMenu();
-        }
+    .wrap {
+      @include ClearMenu();
     }
+  }
 }
 
 .powered-by-discourse {
-    margin-bottom: 3em;
-    border-radius: 0px 0px 1em 0px;
+  margin-bottom: 3em;
+  border-radius: 0px 0px 1em 0px;
 
-    background: $BGPrimary;
-    backdrop-filter: blur(2rem);
+  background: $BGPrimary;
+  backdrop-filter: blur(2rem);
 
-    .powered-by-discourse__content {
-        background: transparent;
-    }
+  .powered-by-discourse__content {
+    background: transparent;
+  }
 }
 
 .search-menu .search-input,
 .search-menu-container .search-input {
-    @include ClearMenu()
+  @include ClearMenu();
 }
 
 profiler-results.profiler-top {
-    top: 0px !important
+  top: 0px !important;
 }
 
 .topic-list-item.visited,
 .latest-topic-list-item.visited,
 .category-topic-link.visited {
-    background: transparent;
+  background: transparent;
 }
 
 .form-kit__control-input {
-    // i hate having to force stuff
-    border: none !important;
-    border-radius: 8px !important;
+  // i hate having to force stuff
+  border: none !important;
+  border-radius: 8px !important;
 }
 
 .d-page-header__description {
-    display: none;
+  display: none;
 }
 
 .sidebar-search__input-container {
-    @include ClearMenu();
+  @include ClearMenu();
 
-    .sidebar-search__shortcut-hint {
-        border-radius: 100%
-    }
+  .sidebar-search__shortcut-hint {
+    border-radius: 100%;
+  }
 }
 
 .group-details-container,
 .user-content {
-    @include ClearMenu();
+  @include ClearMenu();
 
-    padding: 5px;
+  padding: 5px;
 
-    input {
-        background-color: transparent;
-        border: 0
-    }
+  input {
+    background-color: transparent;
+    border: 0;
+  }
 }
 
 .list-controls,
 #list-area {
-    background: transparent
+  background: transparent;
 }
 
 #create-topic {
-    color: white;
+  color: white;
 }
 
 .navigation-categories .category-list {
-    @include ClearMenuNoRounding();
+  @include ClearMenuNoRounding();
 
-    border-radius: 0px 18px 18px 0px
+  border-radius: 0px 18px 18px 0px;
 }
 
 .category-breadcrumb summary {
-    background: transparent !important;
-    backdrop-filter: none !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
 }
 
 .categories-and-latest .column:not(.column.categories) {
-    @include ClearMenuNoRounding();
+  @include ClearMenuNoRounding();
 
-    border-radius: 18px 0px 18px 18px;
+  border-radius: 18px 0px 18px 18px;
 }
 
 .topic-list-item {
-    border-bottom: 0px
+  border-bottom: 0px;
 }
 
 .topic-replies-toggle-wrapper {
-    @include ClearMenuNoRounding();
+  @include ClearMenuNoRounding();
 
-    border-radius: 0px 0px 8px 0px;
+  border-radius: 0px 0px 8px 0px;
 }
 
-#main-outlet>.regular {
-    background: transparent;
+#main-outlet > .regular {
+  background: transparent;
 }
 
 @if ($Disable_Cursor) {
-    * {
-        cursor: default !important
-    }
+  * {
+    cursor: default !important;
+  }
 }
 
 // Why this is a separate class beats me..
@@ -232,47 +232,47 @@ body.signup-page .d-header,
 body.invite-page .d-header,
 body.password-reset-page .d-header,
 body.activate-account-page .d-header {
-    background: unset;
+  background: unset;
 }
 
 .account-created-page .main-outlet .activate-account-page .main-outlet {
-    backdrop-filter: none !important;
-    background-color: transparent !important;
+  backdrop-filter: none !important;
+  background-color: transparent !important;
 }
 
 .activate-account {
-    @include ClearMenu();
+  @include ClearMenu();
 }
 
 .container.groups-index,
 .container.badges,
 .directory {
-    background: transparent;
+  background: transparent;
 }
 
 .groups-header-filters-name,
 .groups-header-filters summary {
-    @include ClearMenuNoBlur();
+  @include ClearMenuNoBlur();
 
-    background-color: $BGPrimary !important;
+  background-color: $BGPrimary !important;
 }
 
 .body-page {
-    max-width: unset;
+  max-width: unset;
 }
 
 .broken-theme-alert-banner {
-    position: sticky;
-    top: calc(var(--header-offset) + $HeaderOffset);
+  position: sticky;
+  top: calc(var(--header-offset) + $HeaderOffset);
 
-    background: rgb(from var(--danger) r g b / 0.5);
-    backdrop-filter: blur(2rem);
+  background: rgb(from var(--danger) r g b / 0.5);
+  backdrop-filter: blur(2rem);
 
-    //width: var(--header-width);
-    width: 70%;
-    border-radius: 18px;
+  //width: var(--header-width);
+  width: 70%;
+  border-radius: 18px;
 
-    text-align: center;
-    display: block;
-    margin: auto;
+  text-align: center;
+  display: block;
+  margin: auto;
 }

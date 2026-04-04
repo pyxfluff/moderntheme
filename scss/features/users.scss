@@ -4,156 +4,157 @@
 @import "mixins/variables";
 
 .user-main {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--secondary) 65%),
-        var(--profile-bg-img);
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--secondary) 65%),
+    var(--profile-bg-img);
 
-    background-size: cover;
-    background-position: top;
+  background-size: cover;
+  background-position: top;
 
+  padding: 10px;
+  border-radius: 18px;
+  overflow-x: hidden;
+
+  a#user-nav-skip-link,
+  a#skip-link {
+    top: -175px;
+  }
+
+  .about {
+    background: var(--profile-bg-img);
     padding: 10px;
-    border-radius: 18px;
-    overflow-x: hidden;
 
-    a#user-nav-skip-link,
-    a#skip-link {
-        top: -175px;
+    &.has-background .user-profile-image {
+      border-radius: 18px;
+
+      background: none !important;
     }
 
-    .about {
-        background: var(--profile-bg-img);
-        padding: 10px;
+    .staff-counters {
+      @include ClearMenu();
 
-        &.has-background .user-profile-image {
-            border-radius: 18px;
-
-            background: none !important;
-        }
-
-        .staff-counters {
-            @include ClearMenu();
-
-            margin-bottom: 5px;
-            color: var(--primary);
-            backdrop-filter: blur(1rem);
-        }
-
-        #collapsed-info-panel dl {
-            margin-left: 8px;
-        }
-
-        .details {
-            @include ClearMenu();
-
-            .primary {
-                margin: 10px;
-                margin-top: 0px !important;
-
-                .controls {
-                    margin-right: 15px;
-                }
-            }
-        }
+      margin-bottom: 5px;
+      color: var(--primary);
+      backdrop-filter: blur(1rem);
     }
 
-    .details,
-    .user-content {
-        background: none;
+    #collapsed-info-panel dl {
+      margin-left: 8px;
     }
+
+    .details {
+      @include ClearMenu();
+
+      .primary {
+        margin: 10px;
+        margin-top: 0px !important;
+
+        .controls {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .details,
+  .user-content {
+    background: none;
+  }
 }
 
 .dashboard-next .nav::after,
 .dashboard-next .nav::before {
-    background: transparent !important;
+  background: transparent !important;
 }
 
 .dropdown-menu,
 .user-menu,
 .select-kit-collection {
+  @include ClearMenu();
+
+  background-color: rgba(var(--secondary-rgb), 0.9);
+
+  .item-label {
+    // correct centered usernames
+    align-self: baseline;
+  }
+
+  .panel-body-bottom a {
+    @include ClearMenu();
+  }
+
+  .tabs-list .btn .d-icon {
+    border-radius: 100% !important;
+  }
+
+  // intentionally weird, .notification doesn't work idk why
+  .user-menu-button-all-notifications li:hover {
+    background-color: var(--primary-low) !important;
+    transition: all linear 0.25s;
+  }
+
+  .quick-access-panel ul {
     @include ClearMenu();
 
-    background-color: rgba(var(--secondary-rgb), 0.9);
-
-    .item-label {
-        // correct centered usernames
-        align-self: baseline;
+    .notification.read {
+      margin-bottom: 5px;
+      background: transparent;
     }
-
-    .panel-body-bottom a {
-        @include ClearMenu();
-    }
-
-    .tabs-list .btn .d-icon {
-        border-radius: 100% !important;
-    }
-
-    // intentionally weird, .notification doesn't work idk why
-    .user-menu-button-all-notifications li:hover {
-        background-color: var(--primary-low) !important;
-        transition: all linear .25s
-    }
-
-    .quick-access-panel ul {
-        @include ClearMenu();
-
-        .notification.read {
-            margin-bottom: 5px;
-            background: transparent;
-        }
-    }
+  }
 }
 
 .menu-panel.drop-down {
-    top: 105%
+  top: 105%;
 }
 
 .fk-d-menu__inner-content,
 .badge-card {
-    @include ClearMenu();
+  @include ClearMenu();
 }
 
 .user-card .card-content,
 .group-card .card-content {
-    backdrop-filter: blur(1rem);
-    background: transparent;
-    border-radius: 18px;
+  backdrop-filter: blur(1rem);
+  background: transparent;
+  border-radius: 18px;
 }
 
 #user-card,
 .fk-d-menu {
-    border-radius: 18px !important;
+  border-radius: 18px !important;
 
-    &.user-card {
-        background: transparent;
-    }
+  &.user-card {
+    background: transparent;
+  }
 
-    button {
-        border-radius: 16px !important;
-    }
+  button {
+    border-radius: 16px !important;
+  }
 
-    .user-card-badge-link span.user-badge,
-    .more-user-badges a {
-        background-color: $BGPrimary
-    }
+  .user-card-badge-link span.user-badge,
+  .more-user-badges a {
+    background-color: $BGPrimary;
+  }
 }
 
 .user-badge,
 .more-user-badges a,
 .reviewable-filters,
 .user:not(.directory-table__row) {
-    @include ClearMenu();
+  @include ClearMenu();
 
-    details,
-    summary {
-        background: none !important;
-    }
+  details,
+  summary {
+    background: none !important;
+  }
 }
 
 .post-list .post-list-item {
-    background: transparent;
-    border: 0px;
+  background: transparent;
+  border: 0px;
 }
 
 .user-notifications-list .notification {
-    border: 0px;
-    background: transparent;
+  border: 0px;
+  background: transparent;
 }

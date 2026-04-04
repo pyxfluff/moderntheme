@@ -4,36 +4,36 @@
 @import "mixins/variables";
 
 .search-container {
-    background: transparent;
+  background: transparent;
 
-    summary:not(.select-kit-header),
-    details {
-        background: transparent !important;
-        backdrop-filter: none !important;
-    }
+  summary:not(.select-kit-header),
+  details {
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
 
-    .search-advanced-filters {
-        @include ClearMenu();
-    }
+  .search-advanced-filters {
+    @include ClearMenu();
+  }
 
-    .select-kit-header,
-    input {
-        @include ClearMenu();
+  .select-kit-header,
+  input {
+    @include ClearMenu();
 
-        background-color: (var(--secondary-rgb), 0.5) !important
-    }
+    background-color: (var(--secondary-rgb), 0.5) !important;
+  }
 
-    .search-header,
-    .search-bar,
-    .search-filters,
-    .search-advanced-filters,
-    .search-info {
-        background: transparent !important;
-    }
+  .search-header,
+  .search-bar,
+  .search-filters,
+  .search-advanced-filters,
+  .search-info {
+    background: transparent !important;
+  }
 }
 
 .search-menu-container .menu-panel {
-    @include ClearMenu();
+  @include ClearMenu();
 
-    top: 110% !important
+  top: 110% !important;
 }

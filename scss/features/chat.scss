@@ -4,16 +4,16 @@
 @import "mixins/variables";
 
 .chat-drawer .chat-drawer-container {
-    @include ClearMenuNoRounding();
+  @include ClearMenuNoRounding();
 
-    border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .c-navbar-container {
-    background: $BGPrimary !important;
-    border: 0px;
+  background: $BGPrimary !important;
+  border: 0px;
 
-    border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .chat-message-container,
@@ -21,28 +21,28 @@
 controls ul li a,
 .c-footer,
 .boxed.white {
-    background: transparent !important;
+  background: transparent !important;
 }
 
 .chat-message-creator__members {
-    @include ClearMenu()
+  @include ClearMenu();
 }
 
 .chat-message-creator__new-group-header {
-    @include ClearMenu();
+  @include ClearMenu();
 
-    padding-left: 5px;
-    padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 
-    input {
-        padding-left: 3px;
-        background-color: transparent;
-    }
+  input {
+    padding-left: 3px;
+    background-color: transparent;
+  }
 }
 
 .chat-notices__notice,
 .chat-notices .chat-retention-reminder {
-    @include ClearMenu();
+  @include ClearMenu();
 
-    background-color: rgba(var(--tertiary-rgb), .5);
+  background-color: rgba(var(--tertiary-rgb), 0.5);
 }

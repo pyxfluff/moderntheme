@@ -5,119 +5,131 @@
 
 button,
 .controls ul li a {
-    border-radius: 8px !important;
+  border-radius: 8px !important;
 }
 
 details,
 input,
 pre,
 aside {
-    &:not(pre code) &:not(.search-term__input) {
-        @include ClearMenu();
-    }
+  &:not(pre code) &:not(.search-term__input) {
+    @include ClearMenu();
+  }
 }
 
-.btn.no-text :not(.btn-transparent) :not(.topic-map__views-trigger) :not(.show-all) :not(.profile-tab-btn) :not(.topic-drafts-menu-trigger) :not(.notifications-tracking-trigger) :not(.edit-category) :not(.toggle-like) :not(.topic-map__links-trigger) :not(.notifications-tracking-btn) :not(#upgrade-all) :not(.btn-insert-table),
+.btn.no-text
+  :not(.btn-transparent)
+  :not(.topic-map__views-trigger)
+  :not(.show-all)
+  :not(.profile-tab-btn)
+  :not(.topic-drafts-menu-trigger)
+  :not(.notifications-tracking-trigger)
+  :not(.edit-category)
+  :not(.toggle-like)
+  :not(.topic-map__links-trigger)
+  :not(.notifications-tracking-btn)
+  :not(#upgrade-all)
+  :not(.btn-insert-table),
 .controls .btn.no-text {
-    border-radius: 100% !important;
-    aspect-ratio: 1;
+  border-radius: 100% !important;
+  aspect-ratio: 1;
 
-    background: $BGPrimary;
+  background: $BGPrimary;
 }
 
 .modal,
 .mfp-container,
 .dialog-overlay {
-    backdrop-filter: blur($PrimaryBlurFactor);
+  backdrop-filter: blur($PrimaryBlurFactor);
 
-    .d-modal__container,
-    .dialog-content {
-        background: transparent;
-        border-radius: 18px;
-    }
+  .d-modal__container,
+  .dialog-content {
+    background: transparent;
+    border-radius: 18px;
+  }
 }
 
 .dialog-content {
-    background: transparent !important;
-    border-radius: 18px;
+  background: transparent !important;
+  border-radius: 18px;
 }
 
 .alert,
 .fk-d-tooltip__content {
-    backdrop-filter: blur(2rem);
+  backdrop-filter: blur(2rem);
 
-    border-radius: 8px;
-    opacity: 0.7;
+  border-radius: 8px;
+  opacity: 0.7;
 }
 
 .fk-d-tooltip__trigger .btn .btn-icon .no-text {
-    border-radius: 100%;
-    background-color: $BGPrimary;
+  border-radius: 100%;
+  background-color: $BGPrimary;
 }
 
 .topic-footer-main-buttons .btn:not(.danger):not(.create),
 controls ul li a,
-.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger):not(.post-action-menu__show-replies):not(.select-kit-header):not(.dropdown-menu__item button),
+.btn-icon-text:not(.create):not(.danger):not(.btn-primary):not(.btn-danger):not(
+    .post-action-menu__show-replies
+  ):not(.select-kit-header):not(.dropdown-menu__item button),
 .user-admin,
 .user-controls a,
 .controls a.btn {
-    background: $BGPrimary !important;
+  background: $BGPrimary !important;
 
-
-    &.create,
-    &.compose-pm,
-    &.chat-direct-message-btn {
-        color: var(--tertiary);
-    }
+  &.create,
+  &.compose-pm,
+  &.chat-direct-message-btn {
+    color: var(--tertiary);
+  }
 }
 
 button,
 summary {
-    transition: background linear .15s;
+  transition: background linear 0.15s;
 }
 
 .select-kit-header.combo-box-header,
 .select-kit.multi-select .multi-select-header,
 .select-kit.multi-select {
-    @include ClearMenu()
+  @include ClearMenu();
 }
 
 .composer-toggle-switch__slider {
-    border-radius: 18px;
-    background: $BGPrimary;
+  border-radius: 18px;
+  background: $BGPrimary;
 
-    span.--active {
-        border-radius: 100%;
-    }
+  span.--active {
+    border-radius: 100%;
+  }
 }
 
 .composer-toggle-switch__slider {
-    background: var(--d-hover);
+  background: var(--d-hover);
 }
 
 .d-editor-preview {
-    border-radius: 18px;
+  border-radius: 18px;
 }
 
 .d-editor-textarea-wrapper,
 .groups-form input,
 .groups-form details {
-    @include ClearMenuNoBlur();
+  @include ClearMenuNoBlur();
 }
 
 .d-modal__body {
+  textarea,
+  .select-kit.combo-box .select-kit-header,
+  details summary,
+  input {
+    @include ClearMenuNoBlur();
 
-    textarea,
-    .select-kit.combo-box .select-kit-header,
-    details summary,
-    input {
-        @include ClearMenuNoBlur();
+    backdrop-filter: none !important;
+  }
 
-        backdrop-filter: none !important;
-    }
-
-    details {
-        backdrop-filter: none !important;
-        background: transparent !important
-    }
+  details {
+    backdrop-filter: none !important;
+    background: transparent !important;
+  }
 }

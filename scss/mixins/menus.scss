@@ -1,43 +1,41 @@
 // pyxfluff 2026
 
 @mixin ClearMenu() {
-    backdrop-filter: blur($PrimaryBlurFactor);
-    -webkit-backdrop-filter: blur($PrimaryBlurFactor);
+  backdrop-filter: blur($PrimaryBlurFactor);
+  -webkit-backdrop-filter: blur($PrimaryBlurFactor);
 
-    background: $BGPrimary;
-    border-radius: 18px !important;
-    border: none !important;
+  background: $BGPrimary;
+  border-radius: 18px !important;
+  border: none !important;
 }
 
 @mixin ClearMenuForceful() {
-    backdrop-filter: blur($PrimaryBlurFactor) !important;
-    -webkit-backdrop-filter: blur($PrimaryBlurFactor) !important;
+  backdrop-filter: blur($PrimaryBlurFactor) !important;
+  -webkit-backdrop-filter: blur($PrimaryBlurFactor) !important;
 
-    background: $BGPrimary !important;
-    border-radius: 18px !important;
-    border: none !important;
+  background: $BGPrimary !important;
+  border-radius: 18px !important;
+  border: none !important;
 }
 
 @mixin ClearMenuNoRounding() {
-    backdrop-filter: blur($PrimaryBlurFactor);
-    -webkit-backdrop-filter: blur($PrimaryBlurFactor);
+  backdrop-filter: blur($PrimaryBlurFactor);
+  -webkit-backdrop-filter: blur($PrimaryBlurFactor);
 
-    background: $BGPrimary;
-    border: none !important;
+  background: $BGPrimary;
+  border: none !important;
 }
 
 @mixin ClearMenuNoBlur() {
-    background: $BGPrimary;
-    border: none !important;
-    border-radius: 18px !important;
+  background: $BGPrimary;
+  border: none !important;
+  border-radius: 18px !important;
 }
 
 @mixin BorderByOption($style) {
-    @if $style =="more" {
-        border-radius: 18px;
-    }
-
-    @else {
-        border-radius: 8px;
-    }
+  @if $style == "more" {
+    border-radius: 18px;
+  } @else {
+    border-radius: 8px;
+  }
 }
