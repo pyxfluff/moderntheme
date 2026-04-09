@@ -405,9 +405,15 @@ div.edit-category .edit-category-title-bar {
   }
 }
 
-.upgrades-banner {
+.upgrades-banner,
+.btn.update-prompt-message {
   background: rgba(from var(--tertiary-low) r g b / 0.5) !important;
   backdrop-filter: blur(1rem);
 
   border-radius: 18px;
+}
+
+.software-update-prompt {
+  background-color: transparent;
+  box-shadow: none;
 }
