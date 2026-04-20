@@ -5,234 +5,234 @@
 
 .post-stream,
 .small-action .small-action-desc {
-  // not sure why actions are different from post-stream?
-  width: 100%;
+    // not sure why actions are different from post-stream?
+    width: 100%;
 }
 
 .topic-body {
-  // full width support
-  width: 100%;
+    // full width support
+    width: 100%;
 
-  border-top: 0px;
+    border-top: 0px;
 }
 
 .post-menu-area {
-  background-color: $BGPrimary;
+    background-color: $BGPrimary;
 
-  width: fit-content;
-  float: right;
+    width: fit-content;
+    float: right;
 
-  padding: 5px;
-  margin-bottom: 0px;
+    padding: 5px;
+    margin-bottom: 0px;
 
-  padding-top: 0px;
-  margin-top: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
 
-  border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px;
 
-  button {
-    border-radius: 4px;
-    transition: all 0.25s;
-    background: none !important;
-
-    &.toggle-like {
-      .svg {
+    button {
+        border-radius: 4px;
         transition: all 0.25s;
-      }
+        background: none !important;
+
+        &.toggle-like {
+            .svg {
+                transition: all 0.25s;
+            }
+        }
     }
-  }
 }
 
 .topic-status-info,
 .topic-timer-info {
-  border: 0px;
+    border: 0px;
 }
 
 code,
 aside.onebox {
-  @include ClearMenuNoBlur();
+    @include ClearMenuNoBlur();
 
-  box-shadow: none;
+    box-shadow: none;
 }
 
 blockquote {
-  @include ClearMenuNoBlur();
-  border-radius: 6px 14px 14px 6px !important;
+    @include ClearMenuNoBlur();
+    border-radius: 6px 14px 14px 6px !important;
 
-  //border-left: 4px solid $BGPrimary !important;
+    //border-left: 4px solid $BGPrimary !important;
 }
 
 nav.post-controls .actions .double-button button.like,
 nav.post-controls .actions .double-button button.like .d-icon {
-  transition: all 0.25s;
+    transition: all 0.25s;
 
-  &.d-hover .d-icon {
-    height: 1.25em;
-    width: 1.25em;
-  }
+    &.d-hover .d-icon {
+        height: 1.25em;
+        width: 1.25em;
+    }
 }
 
 .post-actions {
-  .post-action {
-    background-color: $BGPrimary;
-    border-radius: 0px 0px 0px 8px;
-    padding: 10px;
-  }
+    .post-action {
+        background-color: $BGPrimary;
+        border-radius: 0px 0px 0px 8px;
+        padding: 10px;
+    }
 }
 
 #suggested-topics-title,
 #related-topics-title {
-  @include ClearMenuNoRounding();
+    @include ClearMenuNoRounding();
 
-  padding: 10px;
-  margin-bottom: 0px;
-  border-radius: 18px 18px 0px 0px;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 18px 18px 0px 0px;
 }
 
 .selected-posts {
-  @include ClearMenu();
+    @include ClearMenu();
 }
 
 .regular.contents,
 .topic-map,
 .topic-statuses:has(:not(:empty)) {
-  background-color: $BGPrimary;
-  border-radius: 14px;
+    background-color: $BGPrimary;
+    border-radius: 14px;
 
-  &.contents {
-    border-radius: 6px 6px 0px 6px !important;
-  }
+    &.contents {
+        border-radius: 6px 6px 0px 6px !important;
+    }
 }
 
 .topic-statuses:has(:not(:empty)) {
-  padding: 3px 10px 3px 10px;
-  margin-right: 5px;
+    padding: 3px 10px 3px 10px;
+    margin-right: 5px;
 }
 
 .archetype-private_message .topic-map section {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .cooked img,
 img.diff-ins,
 img.diff-del {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .topic-list-item,
 .topic-list-item.visited .topic-list-data,
 .latest-topic-list-item.visited,
 .category-topic-link.visited {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .fk-d-menu.toolbar-menu__options-content.toolbar-popup-menu-options.-animated.-expanded {
-  @include ClearMenu();
+    @include ClearMenu();
 
-  button,
-  .dropdown-menu,
-  .fk-d-menu__inner-content {
-    background: transparent !important;
-  }
+    button,
+    .dropdown-menu,
+    .fk-d-menu__inner-content {
+        background: transparent !important;
+    }
 }
 
 .topic-map {
-  border: 0px !important;
+    border: 0px !important;
 
-  width: 100%;
-  max-width: unset !important;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    width: 100%;
+    max-width: unset !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-  .topic-map__contents {
-    margin-left: 7px;
-    margin-right: 7px;
-  }
+    .topic-map__contents {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
 }
 
 .modal.history-modal #display-modes .nav {
-  @include ClearMenu();
+    @include ClearMenu();
 }
 
 .edit-reason {
-  border: 5px solid var(--highlight-bg);
-  border-radius: 4px;
+    border: 5px solid var(--highlight-bg);
+    border-radius: 4px;
 }
 
 .meta,
 .lightbox-wrapper .d-icon {
-  @include ClearMenuNoRounding();
+    @include ClearMenuNoRounding();
 
-  background-color: (var(--secondary-rgb), 0.5) !important;
-  color: var(--primary) !important;
-  border-radius: 0px 0px 8px 8px;
+    background-color: (var(--secondary-rgb), 0.5) !important;
+    color: var(--primary) !important;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .pswp__img {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .pswp__bg {
-  background: var(--lightbox-image);
-  background-size: cover;
-  filter: blur(8px);
-  //transition: 1s linear opacity !important;
+    background: var(--lightbox-image);
+    background-size: cover;
+    filter: blur(8px);
+    //transition: 1s linear opacity !important;
 }
 
 .pswp--ui-visible .pswp__bg {
-  opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 .pswp__scroll-wrap {
-  background: rgb(from var(--pswp-bg) r g b / 0.8);
+    background: rgb(from var(--pswp-bg) r g b / 0.8);
 }
 
 .cooked details {
-  @include ClearMenu();
+    @include ClearMenu();
 
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 .topic-navigation button:not(.back-button) {
-  @include ClearMenu();
+    @include ClearMenu();
 
-  aspect-ratio: 1;
+    aspect-ratio: 1;
 }
 
 .quote {
-  blockquote {
-    border-radius: 0px 0px 18px 18px !important;
-  }
+    blockquote {
+        border-radius: 0px 0px 18px 18px !important;
+    }
 
-  div.title {
-    @include ClearMenuNoRounding();
+    div.title {
+        @include ClearMenuNoRounding();
 
-    border-radius: 18px 18px 0px 0px;
-  }
+        border-radius: 18px 18px 0px 0px;
+    }
 }
 
 @if ($Remove_Default_Borders) {
-  .btn {
-    border: 0px !important;
-  }
+    .btn {
+        border: 0px !important;
+    }
 }
 
 .post-notice {
-  width: 100%;
-  max-width: unset;
-  margin-top: 10px;
+    width: 100%;
+    max-width: unset;
+    margin-top: 10px;
 
-  border: 0px !important;
-  border-radius: 8px;
-  background: rgb(from var(--tertiary-very-low) r g b / 0.5);
+    border: 0px !important;
+    border-radius: 8px;
+    background: rgb(from var(--tertiary-very-low) r g b / 0.5);
 }
 
 .topic-avatar {
-  border: 0px;
+    border: 0px;
 }
 
 .liked-users-list__container {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 /* padding-block: 0;
@@ -244,127 +244,138 @@ img.diff-del {
 // PMs
 .body-page,
 .private_message {
-  background: transparent;
+    background: transparent;
 }
 
 .archetype-private_message .post__body {
-  .regular.contents {
-    border: 0px;
+    .regular.contents {
+        border: 0px;
 
-    .post-menu-area {
-      margin: 0px;
+        .post-menu-area {
+            margin: 0px;
+        }
     }
-  }
 
-  .post__actions {
-    margin: 0px;
-  }
+    .post__actions {
+        margin: 0px;
+    }
 }
 
 .archetype-private_message .post--current-user .post__menu-area,
 .archetype-private_message .current-user-post .regular.contents {
-  background: rgb(from var(--tertiary-very-low) r g b / 0.5);
+    background: rgb(from var(--tertiary-very-low) r g b / 0.5);
 }
 
 .participants .user {
-  @include ClearMenuForceful();
+    @include ClearMenuForceful();
 }
 
 .archetype-private_message .topic-map .participants,
 .archetype-private_message .topic-map section {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .quote-button {
-  background: transparent;
+    background: transparent;
 
-  button {
-    background: transparent !important;
-  }
+    button {
+        background: transparent !important;
+    }
 }
 
-@if $Post_Tags == "true" {
-  span.staff a:after {
-    content: "Staff";
+@if $Post_Tags =="true" {
+    span.staff a:after {
+        content: "Staff";
 
-    @include BorderByOption("less");
+        @include BorderByOption("less");
 
-    color: white;
-    background-color: #1a1a1a;
+        color: white;
+        background-color: #1a1a1a;
 
-    margin-left: 5px;
-    padding-left: 4px;
-    padding-right: 4px;
+        margin-left: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
 
-    display: inline-block;
-  }
+        display: inline-block;
+    }
 
-  .topic-owner .topic-meta-data div.names span.first:after {
-    content: "OP";
+    .topic-owner .topic-meta-data div.names span.first:after {
+        content: "OP";
 
-    @include BorderByOption("less");
+        @include BorderByOption("less");
 
-    color: white;
-    background-color: #1a1a1a;
+        color: white;
+        background-color: #1a1a1a;
 
-    margin-left: 5px;
-    padding-left: 4px;
-    padding-right: 4px;
+        margin-left: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
 
-    display: inline-block;
-  }
+        display: inline-block;
+    }
 }
 
 // many plugins .....
 
 aside.accepted-answer {
-  padding: var(--space-4) var(--topic-body-width-padding) var(--space-1)
-    var(--topic-body-width-padding);
-  margin: 0px;
+    padding: var(--space-4) var(--topic-body-width-padding) var(--space-1) var(--topic-body-width-padding);
+    margin: 0px;
 }
 
 .more-topics__container {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 p.assigned-to {
-  @include ClearMenu();
+    @include ClearMenu();
 
-  margin: var(--space-4) var(--topic-body-width-padding) var(--space-1)
-    var(--topic-body-width-padding);
-  padding: 15px;
+    margin: var(--space-4) var(--topic-body-width-padding) var(--space-1) var(--topic-body-width-padding);
+    padding: 15px;
 }
 
 .voting-wrapper {
-  .vote-count-wrapper {
-    @include ClearMenuNoBlur();
+    .vote-count-wrapper {
+        @include ClearMenuNoBlur();
 
-    border-radius: 18px 18px 0px 0px !important;
-  }
+        border-radius: 18px 18px 0px 0px !important;
+    }
 
-  button {
-    border-radius: 0px 0px 18px 18px !important;
-    margin-top: 0px;
-  }
+    button {
+        border-radius: 0px 0px 18px 18px !important;
+        margin-top: 0px;
+    }
 }
 
 .topic-voting-menu-content {
-  .fk-d-menu__inner-content {
-    padding: 5px;
-  }
+    .fk-d-menu__inner-content {
+        padding: 5px;
+    }
 
-  .dropdown-menu {
-    background-color: transparent !important;
-    backdrop-filter: none !important;
-  }
+    .dropdown-menu {
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+    }
 
-  .topic-voting-menu__title,
-  .see-votes {
-    border-radius: 12px;
-  }
+    .topic-voting-menu__title,
+    .see-votes {
+        border-radius: 12px;
+    }
 }
 
 .who-voted {
-  @include ClearMenu();
+    @include ClearMenu();
+}
+
+.post-users-popup {
+    background: transparent;
+}
+
+.embedded-posts .topic-body {
+    width: 100%
+}
+
+.embedded-posts.top {
+    width: 95%;
+    border-top: 0px !important
 }
