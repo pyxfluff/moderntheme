@@ -57,13 +57,19 @@
     }
 
     .nav-stacked {
-        li, a {
+
+        li,
+        a {
             background: transparent;
         }
     }
 
     .admin-detail {
         width: 100%;
+    }
+
+    .topic-list .topic-list-data {
+        padding: 10px 5px 05px 5px;
     }
 }
 
