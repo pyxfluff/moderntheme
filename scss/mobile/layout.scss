@@ -1,0 +1,86 @@
+// pyxfluff 2026
+
+@use "lib/viewport";
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+.hamburger-panel .menu-panel.slide-in {
+    left: calc((-50% / 2) + 10px);
+    //top: -10px;
+    height: calc(100vh - 20px);
+
+    border: 0px;
+    border-radius: 18px;
+}
+
+.user-menu-dropdown-wrapper .user-menu.slide-in {
+    // baaaaaasically the same just flip the int :3
+    left: calc((50% / 2) + 10px);
+    height: calc(100vh - 20px);
+}
+
+.panel-body {
+    .sidebar-section-link {
+        border-radius: 14px;
+
+        &:hover {
+            // broken........................
+            background-color: red !important;
+        }
+    }
+}
+
+@include viewport.until(sm) {
+    #main-outlet-wrapper {
+        left: 0px !important;
+        max-width: unset;
+        padding: 0;
+        margin-right: 2%;
+
+        #main-outlet {
+            padding-left: 2% !important;
+            width: calc(100vw - 4%) !important;
+            //padding-left: 0px !important;
+
+            border-radius: 0px !important;
+        }
+    }
+
+    .dropdown-menu a.active {
+        border-radius: 18px;
+    }
+
+    .header-cloak {
+        backdrop-filter: blur(2rem);
+        border-radius: 18px;
+    }
+
+    .nav-stacked {
+        li, a {
+            background: transparent;
+        }
+    }
+
+    .admin-detail {
+        width: 100%;
+    }
+}
+
+#topic-progress {
+    @include ClearMenu();
+
+    background: $BGPrimary !important;
+
+    .bg {
+        border-radius: 18px 0px 0px 18px;
+    }
+
+    margin-left: 5px;
+}
+
+.timeline-fullscreen {
+    @include ClearMenu();
+
+    background: $BGPrimary !important;
+}
