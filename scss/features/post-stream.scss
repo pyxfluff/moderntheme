@@ -28,7 +28,7 @@
     padding-top: 0px;
     margin-top: 0px;
 
-    border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px $PostRadius $PostRadius;
 
     button {
         border-radius: 4px;
@@ -57,7 +57,7 @@ aside.onebox {
 
 blockquote {
     @include ClearMenuNoBlur();
-    border-radius: 6px 14px 14px 6px !important;
+    border-radius: $PostRadius 14px 14px $PostRadius !important;
 
     //border-left: 4px solid $BGPrimary !important;
 }
@@ -100,7 +100,7 @@ nav.post-controls .actions .double-button button.like .d-icon {
     border-radius: 14px;
 
     &.contents {
-        border-radius: 6px 6px 0px 6px !important;
+        border-radius: $PostRadius $PostRadius 0px $PostRadius !important;
     }
 }
 
@@ -262,7 +262,9 @@ img.diff-del {
 }
 
 .archetype-private_message .post--current-user .post__menu-area,
-.archetype-private_message .current-user-post .regular.contents {
+.archetype-private_message .current-user-post .regular.contents,
+.moderator .regular.contents,
+.moderator .post__menu-area {
     background: rgb(from var(--tertiary-very-low) r g b / 0.5);
 }
 
@@ -378,4 +380,80 @@ p.assigned-to {
 .embedded-posts.top {
     width: 95%;
     border-top: 0px !important
+}
+
+.loading-container {
+    width: 100% !important;
+
+    .has-pending-posts,
+    .topic-timer-info {
+        // i kinda wanted to attach this to the topic map, but the topic timer might get in the way :broken_heart:
+        @include ClearMenuNoBlur();
+
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .has-pending-posts {
+        margin-bottom: 5px;
+    }
+
+    .topic-timer-info {
+        padding-left: var(--below-topic-margin)
+    }
+}
+
+.topic-admin-moderation-history a {
+    background: transparent !important; // why is this different!?!?!?!?????
+}
+
+.small-action {
+    padding-top: 10px;
+
+    .timegap,
+    .small-action-contents {
+        @include ClearMenuNoBlur();
+
+        border-radius: $PostRadius;
+
+        //background: $BGPrimary !important;
+    }
+
+    .small-action-contents {
+        padding: 1.15em;
+
+        a {
+            width: 32px;
+            height: 32px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    *:not(.topic-post-visited-line) {
+        border: 0 !important
+    }
+
+    .topic-post-visited-line {
+        width: 100% !important;
+
+        .topic-post-visited-message {
+            @include ClearMenuNoBlur();
+
+            backdrop-filter: blur(8px);
+        }
+    }
+}
+
+.moderator .regular>.cooked {
+    background: transparent;
+}
+
+.post-notice {
+    background: rgb(from var(--tertiary-very-low) r g b / 0.5) !important;
+
+    border-radius: $PostRadius; // probably 18px anyways
 }
