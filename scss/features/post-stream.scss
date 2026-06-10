@@ -498,3 +498,9 @@ p.assigned-to {
         padding: 0 5px;
     }
 }
+
+.discourse-reactions-picker-container {
+    @include ClearMenu();
+
+    background: $BGPrimary !important;
+}
