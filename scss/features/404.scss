@@ -1,0 +1,32 @@
+// pyxfluff 2026
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+#main-outlet.not-found-container {
+    backdrop-filter: blur($PrimaryBlurFactor) !important;
+    background: $BGPrimary !important;
+
+    width: 95%;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 18px;
+
+    margin-top: calc(8em + 15px);
+
+    .page-not-found-search {
+        @include ClearMenu();
+
+        background: rgb(from var(--tertiary-very-low) r g b / 0.5) !important;
+    }
+
+    #search-input {
+        @include ClearMenuNoBlur();
+    }
+
+    .btn {
+        border-radius: 18px !important;
+    }
+}

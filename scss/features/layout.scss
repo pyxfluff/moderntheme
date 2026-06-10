@@ -29,7 +29,6 @@ body {
     }
 }
 
-div.not-found-container,
 #main-outlet-wrapper {
     top: 15px;
     left: 2%;
@@ -188,7 +187,7 @@ profiler-results.profiler-top {
     color: var(--primary);
 
     svg {
-        color: var(--primary)
+        color: var(--primary) !important;
     }
 }
 
@@ -294,4 +293,8 @@ body.activate-account-page .d-header {
 
 .topic-drafts-menu-trigger svg {
     color: var(--d-button-primary-text-color)
+}
+
+.sidebar-section-link-wrapper a {
+    border-radius: 14px !important;
 }
