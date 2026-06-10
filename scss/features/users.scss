@@ -56,9 +56,13 @@
                 margin-top: 0px !important;
 
                 .controls {
-                    margin-right: 15px;
+                    margin-right: 20px;
                 }
             }
+        }
+
+        .secondary {
+            border-top: 0px;
         }
     }
 
@@ -207,4 +211,22 @@
     input {
         border-bottom: 1px solid rgba(var(--primary-rgb), .2) !important;
     }
+}
+
+.new-user-wrapper .user-navigation {
+    border: 0px;
+}
+
+.user-nav,
+.horizontal-overflow-nav .nav-pulls {
+    padding-top: 5px;
+
+    li a {
+        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+        border-radius: 12px 12px 8px 8px !important;
+    }
+}
+
+.user-content {
+    margin-top: 5px;
 }
