@@ -133,3 +133,7 @@ summary {
     background: transparent !important;
   }
 }
+
+.select-kit.combo-box .select-kit-header {
+    @include ClearMenu()
+}
