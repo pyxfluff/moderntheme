@@ -183,8 +183,13 @@ profiler-results.profiler-top {
     background: transparent;
 }
 
-#create-topic {
-    color: white;
+#create-topic,
+.topic-drafts-menu-trigger {
+    color: var(--primary);
+
+    svg {
+        color: var(--primary)
+    }
 }
 
 .navigation-categories .category-list {

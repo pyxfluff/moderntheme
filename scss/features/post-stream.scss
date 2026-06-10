@@ -30,6 +30,11 @@
 
     border-radius: 0px 0px $PostRadius $PostRadius;
 
+    &.nested-view__op-menu,
+    &.nested-post__menu {
+        border-radius: $PostRadius !important;
+    }
+
     button {
         border-radius: 4px;
         transition: all 0.25s;
@@ -96,10 +101,12 @@ nav.post-controls .actions .double-button button.like .d-icon {
 .regular.contents,
 .topic-map,
 .topic-statuses:has(:not(:empty)) {
+    //.nested-view__op-content {
     background-color: $BGPrimary;
     border-radius: 14px;
 
     &.contents {
+        //&.nested-view__op-content {
         border-radius: $PostRadius $PostRadius 0px $PostRadius !important;
     }
 }
@@ -456,4 +463,38 @@ p.assigned-to {
     background: rgb(from var(--tertiary-very-low) r g b / 0.5) !important;
 
     border-radius: $PostRadius; // probably 18px anyways
+}
+
+// Nesting
+.nested-view {
+    border: 0;
+    background: transparent;
+
+    max-width: 100%;
+
+    .nested-view__op {
+        background: transparent;
+        border: 0;
+    }
+}
+
+.reactions {
+    margin-left: .6em
+}
+
+.nested-view__op-menu .discourse-boosts__post-menu,
+.nested-post__menu .discourse-boosts__post-menu {
+    padding: 0;
+}
+
+.nested-view__controls {
+    @include ClearMenu();
+
+    background: $BGPrimary !important;
+
+    top: calc(var(--header-offset, 0) + .7em);
+
+    .nested-view__controls-left {
+        padding: 0 5px;
+    }
 }
