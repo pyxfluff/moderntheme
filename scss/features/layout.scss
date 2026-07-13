@@ -64,7 +64,8 @@ body {
     }
 
     body.signup-page &,
-    body.login-page & {
+    body.login-page &,
+    body.account-created-page & {
         // powered by & sidebar are hidden as of rn
         #main-outlet {
             border-radius: 18px !important;
