@@ -41,3 +41,7 @@
 .--active .signup-progress-bar__circle {
     animation: border-pulse cubic-bezier(.16,.52,.41,.83) 1s infinite;
 }
+
+.account-created {
+    @include ClearMenu()
+}
