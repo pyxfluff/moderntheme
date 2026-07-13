@@ -11,3 +11,12 @@ $PostRadius: 16px;
   --d-content-background: transparent; // does not work sadly
   --admin-content-max-width: 100%;
 }
+
+@keyframes border-pulse {
+  0% {
+    box-shadow: 0 0 0 0px var(--success-low);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(from var(--success-low) r g b / 0);
+  }
+}

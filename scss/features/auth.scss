@@ -1,0 +1,43 @@
+// pyxfluff 2026
+
+@import "mixins/menus";
+@import "mixins/variables";
+
+#login-form {
+    input {
+        @include ClearMenuNoBlur();
+    }
+
+    label {
+        background: transparent;
+    }
+}
+
+.signup-page-cta,
+.login-page-cta__buttons {
+
+    .signup-page-cta__login,
+    .signup-page-cta__signup,
+    // literally why
+    .login-page-cta__login,
+    .login-page-cta__signup {
+        color: var(--secondary);
+        //background: rgba(var(--tertiary-rgb), .8) !important;
+        background: var(--tertiary) !important;
+
+        border-radius: 24px !important;
+    }
+
+    .signup-page-cta__signup,
+    .login-page-cta__login {
+        width: 65% !important;
+    }
+}
+
+.signup-progress-bar__circle {
+    @include ClearMenuNoBlur()
+}
+
+.--active .signup-progress-bar__circle {
+    animation: border-pulse cubic-bezier(.16,.52,.41,.83) 1s infinite;
+}

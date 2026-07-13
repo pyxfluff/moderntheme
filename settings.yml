@@ -1,12 +1,17 @@
+#Support_The_Theme:
+#   default: false
+#   description: "If you enjoy using the theme, you can support its continued development on GitHub Sponsors. Learn more: https://github.com/sponsors/pyxfluff (enable this to hide)"
+#   type: bool
+
 Disable_Cursor:
    default: false
-   description: "Legacy setting. When enabled, the cursor will not change states over buttons/text boxes."
+   description: "When enabled, the cursor will not change states over buttons/text boxes."
    type: bool
 
 Background_Image:
   type: upload
   default: ""
-  description: "Upload a background image. Note: If you do not apply this, the background will be grey, and blur will not apply on the sidebar or body."
+  description: "Upload a background image. Note: If you do not apply this, the background will be grey, and blur will not apply on the sidebar or body. All sites are recommended to have a background image."
    
 Background_Type:
   default: scale_to_fit
