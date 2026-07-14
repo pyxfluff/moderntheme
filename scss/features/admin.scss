@@ -411,6 +411,101 @@ div.edit-category .edit-category-title-bar {
 }
 
 // Category builder
+.edit-category-page,
 .admin-new-category-setup {
-    
+    max-width: 60%;
+
+    .category-type-cards__card {
+        border: 0;
+        border-radius: 18px;
+        transition: filter linear .15s;
+
+        &:hover {
+            filter: grayscale(.3)
+        }
+
+        &.--category-type-discussion {
+            background: #fecb4d;
+            color: var(--secondary);
+
+            .category-type-cards__card-description {
+                color: var(--secondary-high)
+            }
+        }
+
+        &.--category-type-events {
+            background: #b43748;
+        }
+
+        &.--category-type-support {
+            background: #fca04b;
+
+            .category-type-cards__card-description {
+                color: var(--secondary-high)
+            }
+        }
+
+        &.--category-type-ideas {
+            background: #ffd161;
+            color: var(--secondary);
+
+            .category-type-cards__card-description {
+                color: var(--secondary-high)
+            }
+        }
+    }
+
+    .form-kit__control-input,
+    .d-multi-select-trigger {
+        @include ClearMenuNoBlur();
+    }
+
+    .d-multi-select-trigger__selected-item {
+        border-radius: 100%;
+        background: var(--secondary)
+    }
+
+    // hate these..
+
+    .form-kit__control-color-input-prefix {
+        border: 0;
+        background: $BGPrimary;
+        border-radius: 18px 0 0 18px;
+    }
+
+    .form-kit__control-color-input-hex {
+        border: 0 !important;
+        background: $BGPrimary;
+        border-radius: 0 18px 18px 0;
+    }
+
+    .--radio-cards .form-kit__control-radio-label {
+        border-radius: 18px;
+        border: 0;
+
+        background: $BGPrimary;
+
+        &:has(input:checked) {
+            background: var(--tertiary);
+            color: var(--secondary)
+        }
+    }
+
+    input:not(.form-kit__control-color-input-hex),
+    .d-select {
+        @include ClearMenuNoBlur();
+    }
+
+    .form-kit__section.emphasis {
+        @include ClearMenu();
+    }
+
+    .select-kit.multi-select .multi-select-header {
+        background: transparent;
+        border: 0;
+    }
+
+    .category-permissions-table .permission-row:last-child {
+        border: 0;
+    }
 }
