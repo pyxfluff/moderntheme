@@ -144,3 +144,7 @@ summary {
 .groups-form .dropdown-select-box-header {
     @include ClearMenuNoBlur()
 }
+
+.d-page-header .d-nav-submenu, .d-page-subheader .d-nav-submenu {
+    border: 0;
+}
