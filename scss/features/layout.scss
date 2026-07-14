@@ -363,3 +363,13 @@ body.activate-account-page .d-header {
 .sidebar-wrapper .sidebar-container {
     border: 0;
 }
+
+.topic-list {
+    @include ClearMenuNoRounding();
+
+    border-radius: 0px 0px 18px 18px;
+
+    &.pull-left {
+        border-radius: 18px;
+    }
+}

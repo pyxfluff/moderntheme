@@ -52,8 +52,9 @@
             width: calc(100% - 10px) !important;
 
             .primary {
+                // ???
                 margin: 10px;
-                margin-top: 0px !important;
+                padding-top: 10px;
 
                 .controls {
                     margin-right: 20px;
@@ -240,4 +241,8 @@
 
 .user-content {
     margin-top: 5px;
+}
+
+.new-user-content-wrapper .topic-list {
+    border-radius: 16px;
 }
