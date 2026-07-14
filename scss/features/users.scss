@@ -246,3 +246,15 @@
 .new-user-content-wrapper .topic-list {
     border-radius: 16px;
 }
+
+.user-content-wrapper .user-primary-navigation .horizontal-overflow-nav {
+    border-block: 0;
+
+    a {
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+.user-secondary-navigation {
+    border: 0 !important;
+}

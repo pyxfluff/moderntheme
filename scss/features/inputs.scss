@@ -76,9 +76,25 @@ summary {
 }
 
 .select-kit-header.combo-box-header,
-.select-kit.multi-select .multi-select-header,
+//.select-kit.multi-select .multi-select-header,
 .select-kit.multi-select {
-    @include ClearMenu();
+    @include ClearMenuNoBlur();
+}
+
+
+.form-vertical {
+    max-width: 40%;
+
+    .select-kit.multi-select .multi-select-header,
+    .select-kit.combo-box .select-kit-header {
+        border-radius: 18px;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .control-group details.select-kit, .ember-text-field, .d-editor {
+        width: 100%;
+    }
 }
 
 .composer-toggle-switch__slider {
@@ -107,7 +123,7 @@ summary {
 .d-modal__body {
 
     textarea,
-    .select-kit.combo-box .select-kit-header,
+    //.select-kit.combo-box .select-kit-header,
     details summary,
     input {
         @include ClearMenuNoBlur();
@@ -122,5 +138,9 @@ summary {
 }
 
 .select-kit.combo-box .select-kit-header {
-    @include ClearMenu()
+    @include ClearMenuNoBlur()
+}
+
+.groups-form .dropdown-select-box-header {
+    @include ClearMenuNoBlur()
 }
