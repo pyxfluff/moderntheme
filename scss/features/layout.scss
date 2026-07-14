@@ -23,9 +23,14 @@ body {
         background-size: $Tile_Size;
     }
 
-    @else {
-        background-image: url($Background_Image) !important;
+    @else if $Background_Type =="static" {
+        background-image: url($Background_Image);
         background-size: cover;
+    }
+
+    @else {
+        // no background
+        background: color-mix(in srgb, var(--wizard-bg-color) 60%, black);
     }
 }
 
@@ -38,9 +43,9 @@ body {
     margin-top: var(--header-offset);
 
     #main-outlet {
-        backdrop-filter: blur($PrimaryBlurFactor) !important;
+        backdrop-filter: blur($PrimaryBlurFactor);
         -webkit-backdrop-filter: blur($PrimaryBlurFactor);
-        background: $BGPrimary !important;
+        background: $BGPrimary;
 
         width: 95%;
 
@@ -66,22 +71,39 @@ body {
     body.signup-page &,
     body.login-page &,
     body.account-created-page & {
+
         // powered by & sidebar are hidden as of rn
         #main-outlet {
             border-radius: 18px !important;
         }
     }
 
-    .sidebar-wrapper,
-    .sidebar-sections {
-        backdrop-filter: blur($PrimaryBlurFactor) !important;
-        -webkit-backdrop-filter: blur($PrimaryBlurFactor);
-        background: $BGPrimary !important;
 
-        border-radius: 18px 0px 0px 0px;
-        margin-right: 0px;
+    @if $Background_Type =="none" {
+        .sidebar-wrapper {
+            background: $BGPrimary;
+            border-radius: 18px 0px 0px 0px;
+            margin-right: 0px;
+        }
 
-        /*
+        .sidebar-sections.admin-panel {
+            background-color: transparent;
+        }
+    }
+
+    @else {
+
+        .sidebar-wrapper,
+        .sidebar-sections {
+            background: $BGPrimary;
+
+            backdrop-filter: blur($PrimaryBlurFactor);
+            -webkit-backdrop-filter: blur($PrimaryBlurFactor);
+
+            border-radius: 18px 0px 0px 0px;
+            margin-right: 0px;
+
+            /*
         // this never works but i still wanna figure it out... 
             height: 100% !important;
             overflow-y: scroll;
@@ -91,8 +113,28 @@ body {
             }
         */
 
-        .sidebar-container {
-            height: 100% !important;
+            .sidebar-container {
+                height: 100% !important;
+            }
+        }
+    }
+
+    .sidebar-sections {
+        padding-top: 0;
+
+        .sidebar-section-wrapper {
+            // needs blur here.. idk why..
+            backdrop-filter: blur($PrimaryBlurFactor);
+            background: $BGPrimary;
+            border-radius: 12px;
+            border: 0;
+
+            margin-top: 1em;
+            padding-right: .2em;
+
+            &:first-child {
+                margin-top: var(--space-2) !important
+            }
         }
     }
 }
@@ -306,4 +348,8 @@ body.activate-account-page .d-header {
 
 .sidebar-section-link-wrapper a {
     border-radius: 14px !important;
+}
+
+.sidebar-wrapper .sidebar-container {
+    border: 0;
 }

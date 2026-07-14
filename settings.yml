@@ -4,38 +4,39 @@
 #   type: bool
 
 Disable_Cursor:
-   default: false
-   description: "When enabled, the cursor will not change states over buttons/text boxes."
-   type: bool
+  default: false
+  description: "When enabled, the cursor will not change states over buttons/text boxes."
+  type: bool
 
 Background_Image:
   type: upload
   default: ""
   description: "Upload a background image. Note: If you do not apply this, the background will be grey, and blur will not apply on the sidebar or body. All sites are recommended to have a background image."
-   
+
 Background_Type:
-  default: scale_to_fit
+  default: static
   type: enum
   choices:
     - tile
-    - scale_to_fit
+    - static
+    - none
   description: "Choose to have your custom background scaled to fit, or tiled"
-  
+
 Tile_Size:
-   default: "150px"
-   description: "Size for the tile background type. Will only work if Background Type is set to tile. WARNING: You must include 'px' at the end of it, or it wont work!"
-   type: string
+  default: "150px"
+  description: "Size for the tile background type. Will only work if Background Type is set to tile. WARNING: You must include 'px' at the end of it, or it wont work!"
+  type: string
 
 PrimaryBlurFactor:
-   default: "3rem"
-   description: "The radius of the blur for menus, modals, and the body. Any standard css unit will work."
-   type: string
-   
+  default: "3rem"
+  description: "The radius of the blur for menus, modals, and the body. Any standard css unit will work."
+  type: string
+
 Post_Tags:
-   default: true
-   description: "Enables Staff tag next to admins and moderators, and \"OP\" next to the topic owner."
-   type: bool
+  default: true
+  description: 'Enables Staff tag next to admins and moderators, and "OP" next to the topic owner.'
+  type: bool
 
 Remove_Default_Borders:
-   default: true
-   description: "(EXPERIMENTAL) If enabled, all borders added by the default/\"foundation\" on buttons will be removed to conform to the theme's style. Disable if this causes problems for your forum."
+  default: true
+  description: '(EXPERIMENTAL) If enabled, all borders added by the default/"foundation" on buttons will be removed to conform to the theme''s style. Disable if this causes problems for your forum and report issues.'

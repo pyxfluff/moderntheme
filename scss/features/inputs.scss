@@ -43,7 +43,7 @@ aside {
 }
 
 .alert,
-.fk-d-tooltip__content {
+.fk-d-tooltip__content:not([data-identifier="user-tip"]) {
     backdrop-filter: blur(2rem);
 
     border-radius: 8px;

@@ -79,7 +79,7 @@
 
 .user-menu,
 .select-kit-collection {
-    @include ClearMenu();
+    @include ClearMenuNoBlur();
 
     background-color: rgba(var(--secondary-rgb), 0.9);
 
@@ -89,7 +89,7 @@
     }
 
     .panel-body-bottom a {
-        @include ClearMenu();
+        @include ClearMenuNoBlur();
     }
 
     .tabs-list .btn .d-icon {
@@ -103,12 +103,23 @@
     }
 
     .quick-access-panel ul {
-        @include ClearMenu();
+        @include ClearMenuNoBlur();
 
         .notification.read {
             margin-bottom: 5px;
             background: transparent;
         }
+    }
+
+    div {
+        border: 0 !important
+    }
+
+    .quick-access-panel {
+        position: relative;
+
+        top: .375em;
+        padding-left: 5px;
     }
 }
 
