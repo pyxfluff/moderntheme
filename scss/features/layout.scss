@@ -122,6 +122,14 @@ body {
     .sidebar-sections {
         padding-top: 0;
 
+        .sidebar-custom-sections {
+            z-index: 999; // allows for the "more.." menu to actually be seen..
+
+            .fk-d-menu__inner-content {
+                background: var(--secondary) !important;
+            }
+        }
+
         .sidebar-section-wrapper {
             // needs blur here.. idk why..
             backdrop-filter: blur($PrimaryBlurFactor);
@@ -129,11 +137,13 @@ body {
             border-radius: 12px;
             border: 0;
 
-            margin-top: 1em;
+            margin-top: .7em;
             padding-right: .2em;
+            padding-left: .2em;
 
             &:first-child {
-                margin-top: var(--space-2) !important
+                margin-top: var(--space-2) !important;
+                padding-top: .3em;
             }
         }
     }
