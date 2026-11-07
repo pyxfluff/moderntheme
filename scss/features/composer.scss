@@ -20,10 +20,6 @@
 
     width: 95%;
 
-    .grippie {
-        border-radius: 18px 18px 0px 0px;
-    }
-
     &.open {
         margin-bottom: 25px;
         box-shadow: 0 0px 40px rgba(0, 0, 0, 1);
@@ -32,6 +28,19 @@
     details.composer-actions,
     summary {
         background: transparent !important;
+    }
+
+    .d-editor-textarea-wrapper {
+        left: 5px;
+    }
+
+    .d-editor-preview-wrapper {
+        border-left: 0;
+    }
+
+    .composer-footer,
+    .reply-to {
+        border: 0;
     }
 }
 
@@ -58,7 +67,7 @@
 
 .composer-action-title {
     .d-button-label {
-        max-width: fit-content
+        max-width: fit-content;
     }
 }
 

@@ -160,8 +160,8 @@
 
 .user-badge,
 .more-user-badges a,
-.reviewable-filters,
-.user:not(.directory-table__row) {
+.reviewable-filters {
+//.user:not(.directory-table__row) {
     @include ClearMenu();
 
     details,

@@ -504,3 +504,11 @@ p.assigned-to {
 
     background: $BGPrimary !important;
 }
+
+.branches code {
+    background: transparent;
+}
+
+aside.onebox.github-onebox > .source.github-onebox__header {
+    background: $BGPrimary
+}
