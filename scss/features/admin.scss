@@ -230,7 +230,7 @@ div.edit-category .edit-category-title-bar {
             rgb(from var(--danger) r g b / 0.5),
             transparent 100%
         );
-        border-radius: 8px 8px 0px 0px;
+        border-radius: 18px 0 0 0;
         color: var(--primary);
         height: 60px;
 
@@ -239,8 +239,9 @@ div.edit-category .edit-category-title-bar {
             align-content: center;
         }
 
-        .review-item__status {
-            align-content: center;
+        .review-item__status,
+       .reviewable-permalink-copy {
+            align-self: center;
         }
 
         .reviewable-created-date {
@@ -558,4 +559,12 @@ div.edit-category .edit-category-title-bar {
     section hr {
         border: 0;
     }
+}
+
+.review-item {
+    @include ClearMenu()
+}
+
+.review-item__insights .horizontal-overflow-nav {
+    border: 0;
 }
