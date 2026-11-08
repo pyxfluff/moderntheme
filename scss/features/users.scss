@@ -258,3 +258,30 @@
 .user-secondary-navigation {
     border: 0 !important;
 }
+
+
+// DEV
+// .d-header {
+//   position: relative;
+//   isolation: isolate;
+//   background-color: transparent;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     z-index: -1;
+//     background-color: color-mix(in srgb, var(--header_background) 20%, transparent);
+//     backdrop-filter: blur(12px);
+//     pointer-events: none;
+//   }
+// }
+
+// .menu-panel {
+//   background-color: color-mix(in srgb, var(--secondary) 20%, transparent);
+//   backdrop-filter: blur(12px);
+// }
+
+// .user-menu .quick-access-panel .read {
+//   background: transparent;
+// }

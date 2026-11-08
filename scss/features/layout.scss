@@ -14,21 +14,19 @@ html {
 }
 
 body {
-    @if $Background_Type =="tile" {
+    @if $Background_Type == "tile" {
         background-image:
-            linear-gradient(0deg,
+            linear-gradient(
+                0deg,
                 rgba(var(--secondary-rgb), 1) 0%,
-                rgba(var(--secondary-rgb), 0.75) 100%),
+                rgba(var(--secondary-rgb), 0.75) 100%
+            ),
             url($Background_Image);
         background-size: $Tile_Size;
-    }
-
-    @else if $Background_Type =="static" {
+    } @else if $Background_Type == "static" {
         background-image: url($Background_Image);
         background-size: cover;
-    }
-
-    @else {
+    } @else {
         // no background
         background: color-mix(in srgb, var(--wizard-bg-color) 60%, black);
     }
@@ -71,15 +69,13 @@ body {
     body.signup-page &,
     body.login-page &,
     body.account-created-page & {
-
         // powered by & sidebar are hidden as of rn
         #main-outlet {
             border-radius: 18px !important;
         }
     }
 
-
-    @if $Background_Type =="none" {
+    @if $Background_Type == "none" {
         .sidebar-wrapper {
             background: $BGPrimary;
             border-radius: 18px 0px 0px 0px;
@@ -89,10 +85,7 @@ body {
         .sidebar-sections.admin-panel {
             background-color: transparent;
         }
-    }
-
-    @else {
-
+    } @else {
         .sidebar-wrapper,
         .sidebar-sections {
             background: $BGPrimary;
@@ -104,7 +97,7 @@ body {
             margin-right: 0px;
 
             /*
-        // this never works but i still wanna figure it out... 
+        // this never works but i still wanna figure it out...
             height: 100% !important;
             overflow-y: scroll;
 
@@ -137,13 +130,13 @@ body {
             border-radius: 12px;
             border: 0;
 
-            margin-top: .7em;
-            padding-right: .2em;
-            padding-left: .2em;
+            margin-top: 0.7em;
+            padding-right: 0.2em;
+            padding-left: 0.2em;
 
             &:first-child {
                 margin-top: var(--space-2) !important;
-                padding-top: .3em;
+                padding-top: 0.3em;
             }
         }
     }
@@ -222,7 +215,9 @@ profiler-results.profiler-top {
     @include ClearMenu();
 
     .sidebar-search__shortcut-hint {
-        border-radius: 100%;
+        background: $BGPrimary;
+        border-radius: 6px;
+        backdrop-filter: blur(2rem);
     }
 }
 
@@ -279,7 +274,7 @@ profiler-results.profiler-top {
     border-radius: 0px 0px 8px 0px;
 }
 
-#main-outlet>.regular {
+#main-outlet > .regular {
     background: transparent;
 }
 
@@ -353,7 +348,7 @@ body.activate-account-page .d-header {
 }
 
 .topic-drafts-menu-trigger svg {
-    color: var(--d-button-primary-text-color)
+    color: var(--d-button-primary-text-color);
 }
 
 .sidebar-section-link-wrapper a {
@@ -371,5 +366,15 @@ body.activate-account-page .d-header {
 
     &.pull-left {
         border-radius: 18px;
+    }
+}
+
+.group-info {
+    .fk-d-tooltip__trigger {
+        @include ClearMenuNoBlur();
+    }
+
+    .group-bio {
+        max-width: 100%;
     }
 }

@@ -49,13 +49,27 @@
 }
 
 .admin-controls {
+    border-radius: 13px !important;
+
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+
+    padding: 5px;
 
     .controls {
         background: transparent !important;
+
+        padding: 0;
     }
+
+    #setting-filter {
+        @include ClearMenuNoBlur();
+    }
+}
+
+.admin-config-page__main-area .admin-detail {
+    padding-top: 5px;
 }
 
 .d-admin-filter {
@@ -68,7 +82,6 @@
     margin-right: 10px;
 
     .nav.nav-stacked {
-
         li:first-child a,
         li:last-child a {
             border-radius: 18px 18px 0px 0px;
@@ -77,7 +90,8 @@
 }
 
 .select-kit-body,
-.select-kit.single-select.dropdown-select-box.is-expanded .select-kit-collection,
+.select-kit.single-select.dropdown-select-box.is-expanded
+    .select-kit-collection,
 .select-kit.single-select.dropdown-select-box.is-expanded .select-kit-body {
     @include ClearMenu();
 
@@ -193,7 +207,9 @@ div.edit-category .edit-category-title-bar {
 }
 
 .admin-controls {
-    @include ClearMenu();
+    background: $BGPrimary;
+    backdrop-filter: blur(2rem);
+    border: 18px;
 
     nav,
     ::before,
@@ -209,9 +225,11 @@ div.edit-category .edit-category-title-bar {
     border: 0px;
 
     .review-item__header {
-        background: linear-gradient(to bottom,
-                rgb(from var(--danger) r g b / 0.5),
-                transparent 100%);
+        background: linear-gradient(
+            to bottom,
+            rgb(from var(--danger) r g b / 0.5),
+            transparent 100%
+        );
         border-radius: 8px 8px 0px 0px;
         color: var(--primary);
         height: 60px;
@@ -283,7 +301,6 @@ div.edit-category .edit-category-title-bar {
 }
 
 .review-item__aside {
-
     details,
     summary {
         border-radius: 18px !important;
@@ -308,7 +325,6 @@ div.edit-category .edit-category-title-bar {
 }
 
 .admin-contents.dashboard.general {
-
     .misc,
     .user-metrics,
     .activity-metrics {
@@ -327,7 +343,6 @@ div.edit-category .edit-category-title-bar {
 }
 
 .sidebar-search {
-
     button,
     input {
         background: transparent !important;
@@ -418,10 +433,10 @@ div.edit-category .edit-category-title-bar {
     .category-type-cards__card {
         border: 0;
         border-radius: 18px;
-        transition: filter linear .15s;
+        transition: filter linear 0.15s;
 
         &:hover {
-            filter: grayscale(.3)
+            filter: grayscale(0.3);
         }
 
         &.--category-type-discussion {
@@ -429,7 +444,7 @@ div.edit-category .edit-category-title-bar {
             color: var(--secondary);
 
             .category-type-cards__card-description {
-                color: var(--secondary-high)
+                color: var(--secondary-high);
             }
         }
 
@@ -441,7 +456,7 @@ div.edit-category .edit-category-title-bar {
             background: #fca04b;
 
             .category-type-cards__card-description {
-                color: var(--secondary-high)
+                color: var(--secondary-high);
             }
         }
 
@@ -450,7 +465,7 @@ div.edit-category .edit-category-title-bar {
             color: var(--secondary);
 
             .category-type-cards__card-description {
-                color: var(--secondary-high)
+                color: var(--secondary-high);
             }
         }
     }
@@ -462,7 +477,7 @@ div.edit-category .edit-category-title-bar {
 
     .d-multi-select-trigger__selected-item {
         border-radius: 100%;
-        background: var(--secondary)
+        background: var(--secondary);
     }
 
     // hate these..
@@ -487,7 +502,7 @@ div.edit-category .edit-category-title-bar {
 
         &:has(input:checked) {
             background: var(--tertiary);
-            color: var(--secondary)
+            color: var(--secondary);
         }
     }
 
@@ -506,6 +521,41 @@ div.edit-category .edit-category-title-bar {
     }
 
     .category-permissions-table .permission-row:last-child {
+        border: 0;
+    }
+}
+
+// 500th nav table
+.directory-table__column-header,
+.admin-users-list .directory-table__column-header-wrapper {
+    border: 0;
+}
+
+.d-page-subheader button {
+    @include ClearMenuNoBlur();
+}
+
+.admin-detail .select-kit.multi-select .multi-select-header {
+    background: transparent;
+    border: 0;
+}
+
+.admin-user {
+    section.details {
+        @include ClearMenu();
+
+        margin: 30px 0 5px 0; // god knows why the margin is assigned to the titles instead of the actual box...
+
+        h1 {
+            margin: 0;
+        }
+
+        div {
+            border: 0;
+        }
+    }
+
+    section hr {
         border: 0;
     }
 }

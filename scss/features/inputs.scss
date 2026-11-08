@@ -44,10 +44,12 @@ aside {
 
 .alert,
 .fk-d-tooltip__content:not([data-identifier="user-tip"]) {
-    backdrop-filter: blur(2rem);
-
-    border-radius: 8px;
+    border-radius: 12px;
     opacity: 0.7;
+
+    .close {
+        top: .15em;
+    }
 }
 
 .fk-d-tooltip__trigger .btn .btn-icon .no-text {
@@ -146,5 +148,20 @@ summary {
 }
 
 .d-page-header .d-nav-submenu, .d-page-subheader .d-nav-submenu {
+    border: 0;
+}
+
+.add-value-input {
+    @include ClearMenuNoBlur();
+
+    background-color: $BGPrimary !important;
+}
+
+.controls .btn {
+    @include ClearMenuNoBlur()
+}
+
+.select-kit.multi-select .multi-select-header {
+    background: transparent;
     border: 0;
 }
