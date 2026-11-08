@@ -11,14 +11,24 @@ button,
 details,
 input,
 pre,
-aside {
+aside,
+input.date-picker {
     &:not(pre code) &:not(.search-term__input) {
         @include ClearMenu();
     }
 }
 
+input.date-picker {
+    @include ClearMenuNoBlur();
+}
+
+.btn.no-text.primary {
+    border-radius: 100% !important;
+}
+
 .btn.no-text
     :not(.btn-transparent)
+    :not(.btn-primary)
     :not(.topic-map__views-trigger)
     :not(.show-all)
     :not(.profile-tab-btn)
@@ -178,11 +188,38 @@ summary {
     background-color: $BGPrimary !important;
 }
 
-.controls .btn {
+.controls .btn,
+.form-kit__control-password-wrapper {
     @include ClearMenuNoBlur();
+
+    .form-kit__control-password {
+        background: transparent;
+    }
 }
 
 .select-kit.multi-select .multi-select-header {
     background: transparent;
     border: 0;
+}
+
+.value-list {
+    .remove-value-btn {
+        margin: 0 !important;
+        border-radius: 18px 0 0 18px !important;
+        background: $BGPrimary;
+    }
+
+    .value-input {
+        border: 0;
+        border-radius: 0px 18px 18px 0;
+        background: $BGPrimary;
+    }
+}
+
+.form-kit__control-checkbox-checkmark {
+    background: $BGPrimary;
+}
+
+.live-dashboard__card {
+    @include ClearMenu();
 }

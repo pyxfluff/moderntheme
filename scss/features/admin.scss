@@ -37,7 +37,8 @@
     @include ClearMenuNoRounding();
 
     width: 81%;
-    border-radius: 0px 0px 18px 18px;
+    border-radius: 18px;
+    padding: 7px !important;
 
     &.pull-left {
         border-radius: 18px;
@@ -240,7 +241,7 @@ div.edit-category .edit-category-title-bar {
         }
 
         .review-item__status,
-       .reviewable-permalink-copy {
+        .reviewable-permalink-copy {
             align-self: center;
         }
 
@@ -532,7 +533,7 @@ div.edit-category .edit-category-title-bar {
     border: 0;
 }
 
-.d-page-subheader button {
+.d-page-subheader button:not(.btn-primary):not(.btn-danger) {
     @include ClearMenuNoBlur();
 }
 
@@ -562,9 +563,104 @@ div.edit-category .edit-category-title-bar {
 }
 
 .review-item {
-    @include ClearMenu()
+    @include ClearMenu();
 }
 
 .review-item__insights .horizontal-overflow-nav {
     border: 0;
+}
+
+// next-gen dashboard
+.dashboard-next {
+    .db-section__wrapper {
+        @include ClearMenu();
+    }
+
+    .db-report__card {
+        background: transparent;
+        border: 0;
+    }
+
+    .db-report__add-report {
+        margin: 10%;
+
+        background: $BGPrimary;
+    }
+}
+
+.admin-reports {
+    .d-segmented-control,
+    .d-segmented-control__slider {
+        @include ClearMenuNoBlur();
+    }
+}
+
+.ai-configure-default-llm {
+    @include ClearMenuNoBlur();
+}
+
+#admin-plugin-chat-integration {
+    .admin-nav-submenu {
+        padding-bottom: 5px;
+        border: 0;
+    }
+
+    .admin-detail {
+        backdrop-filter: unset !important;
+        background: transparent !important;
+    }
+
+    .inline-channel-form {
+        @include ClearMenuNoBlur();
+    }
+
+    .admin-config-area-card__header {
+        background: transparent;
+    }
+
+    .channel-rules-table thead {
+        border: 0;
+        background: transparent;
+    }
+}
+
+.workflows-node-panel,
+.workflows-node-panel__search,
+.workflows-publish-banner,
+.workflows-canvas__controls {
+    @include ClearMenu();
+}
+
+.workflows-canvas {
+    background-color: $BGPrimary;
+    backdrop-filter: blur(2rem);
+    border-radius: 18px;
+}
+
+.workflows-configurator-modal {
+    .is-active {
+        border-radius: 18px 18px 0 0 !important;
+    }
+
+    .form-kit__errors-summary {
+        border-radius: 18px;
+    }
+
+    .workflows-schema-field__key {
+        @include ClearMenuNoBlur();
+    }
+}
+
+.workflows-configurator-modal__column {
+    @include ClearMenuForceful();
+
+    margin: 5px;
+
+    .workflows-context-panel__hint {
+        border-radius: 12px;
+    }
+
+    .workflows-context-panel__section {
+        @include ClearMenuNoBlur();
+    }
 }

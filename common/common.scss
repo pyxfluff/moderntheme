@@ -1,13 +1,14 @@
 // pyxfluff 2024 - 2026
 
 // Theme initializers
+@import "features/inputs";
+
 @import "features/404";
 @import "features/admin";
 @import "features/auth";
 @import "features/chat";
 @import "features/common";
 @import "features/composer";
-@import "features/inputs";
 @import "features/jtabs.scss";
 @import "features/layout";
 @import "features/post-stream";
